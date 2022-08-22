@@ -6,6 +6,8 @@ For example, LiveSplit auto splitter scripts.
 
 ## Developing / Testing the ASL scripts
 
+> Do not move the `.asl` files around or rename them -- they are wired up to LiveSplit by their XML - https://github.com/LiveSplit/LiveSplit.AutoSplitters
+
 First, make sure you are using the latest OpenGOAL.
 
 <!-- TODO - document how to add a new flag -->
