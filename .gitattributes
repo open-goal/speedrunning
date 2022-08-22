@@ -1,0 +1,3 @@
+*.lss linguist-generated
+*.lsl linguist-generated
+*.asl linguist-language=C#
