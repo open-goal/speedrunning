@@ -207,14 +207,14 @@ startup {
 
   // Spider Cave
   vars.spiderCaveResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.spiderCaveResolutions, "res_cave_gnawers", structByteIdx++, typeof(byte), 1, false, "cave_gnawers", false);
-  AddOption(vars.spiderCaveResolutions, "res_cave_dark_crystals", structByteIdx++, typeof(byte), 1, false, "cave_dark_crystals", false);
-  AddOption(vars.spiderCaveResolutions, "res_cave_dark_climb", structByteIdx++, typeof(byte), 1, false, "cave_dark_climb", false);
-  AddOption(vars.spiderCaveResolutions, "res_cave_robot_climb", structByteIdx++, typeof(byte), 1, false, "cave_robot_climb", false);
-  AddOption(vars.spiderCaveResolutions, "res_cave_swing_poles", structByteIdx++, typeof(byte), 1, false, "cave_swing_poles", false);
-  AddOption(vars.spiderCaveResolutions, "res_cave_spider_tunnel", structByteIdx++, typeof(byte), 1, false, "cave_spider_tunnel", false);
-  AddOption(vars.spiderCaveResolutions, "res_cave_platforms", structByteIdx++, typeof(byte), 1, false, "cave_platforms", false);
-  AddOption(vars.spiderCaveResolutions, "res_cave_buzzer", structByteIdx++, typeof(byte), 1, false, "cave_buzzer", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_gnawers", structByteIdx++, typeof(byte), 1, false, "Use your Goggles to shoot the Gnawing Lurkers", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_dark_crystals", structByteIdx++, typeof(byte), 1, false, "Destroy the dark Eco Crystals", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_dark_climb", structByteIdx++, typeof(byte), 1, false, "Explore the Dark Cave", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_robot_climb", structByteIdx++, typeof(byte), 1, false, "Climb the giant robot", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_swing_poles", structByteIdx++, typeof(byte), 1, false, "Launch to the Poles", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_spider_tunnel", structByteIdx++, typeof(byte), 1, false, "Navigate the Spider Tunnel", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_platforms", structByteIdx++, typeof(byte), 1, false, "Climb the Precursor Platforms", false);
+  AddOption(vars.spiderCaveResolutions, "res_cave_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   settings.Add("jak1_need_res_spidercave", true, "Spider Cave", "jak1_need_res");
   AddToSettings(vars.spiderCaveResolutions, "jak1_need_res_spidercave");
   vars.optionLists.Add(vars.spiderCaveResolutions);
