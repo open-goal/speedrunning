@@ -182,11 +182,11 @@ startup {
 
   // Citadel
   vars.citadelResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.citadelResolutions, "res_citadel_sage_green", structByteIdx++, typeof(byte), 1, false, "citadel_sage_green", false);
-  AddOption(vars.citadelResolutions, "res_citadel_sage_blue", structByteIdx++, typeof(byte), 1, false, "citadel_sage_blue", false);
-  AddOption(vars.citadelResolutions, "res_citadel_sage_red", structByteIdx++, typeof(byte), 1, false, "citadel_sage_red", false);
-  AddOption(vars.citadelResolutions, "res_citadel_sage_yellow", structByteIdx++, typeof(byte), 1, false, "citadel_sage_yellow", false);
-  AddOption(vars.citadelResolutions, "res_citadel_buzzer", structByteIdx++, typeof(byte), 1, false, "citadel_buzzer", false);
+  AddOption(vars.citadelResolutions, "res_citadel_sage_green", structByteIdx++, typeof(byte), 1, false, "Free the Green Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_sage_blue", structByteIdx++, typeof(byte), 1, false, "Free the Blue Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_sage_red", structByteIdx++, typeof(byte), 1, false, "Free the Red Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_sage_yellow", structByteIdx++, typeof(byte), 1, false, "Free the Yellow Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   settings.Add("jak1_need_res_citadel", true, "Citadel", "jak1_need_res");
   AddToSettings(vars.citadelResolutions, "jak1_need_res_citadel");
   vars.optionLists.Add(vars.citadelResolutions);
@@ -231,8 +231,8 @@ startup {
 
   // Lava Tube
   vars.lavatubeResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.lavatubeResolutions, "res_lavatube_end", structByteIdx++, typeof(byte), 1, false, "lavatube_end", false);
-  AddOption(vars.lavatubeResolutions, "res_lavatube_buzzer", structByteIdx++, typeof(byte), 1, false, "lavatube_buzzer", false);
+  AddOption(vars.lavatubeResolutions, "res_lavatube_end", structByteIdx++, typeof(byte), 1, false, "Reach the end of the Lava Tube", false);
+  AddOption(vars.lavatubeResolutions, "res_lavatube_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   AddOption(vars.lavatubeResolutions, "res_lavatube_balls", structByteIdx++, typeof(byte), 1, false, "lavatube_balls", false);
   settings.Add("jak1_need_res_lavatube", true, "Lava Tube", "jak1_need_res");
   AddToSettings(vars.lavatubeResolutions, "jak1_need_res_lavatube");
