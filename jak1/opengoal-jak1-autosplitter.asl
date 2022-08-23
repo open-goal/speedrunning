@@ -260,7 +260,8 @@ startup {
 
 init {
   vars.DebugOutput("Running {init} looking for `gk.exe`", true);
-  var sw = new Stopwatch(); sw.Start();
+  var sw = new Stopwatch();
+  sw.Start();
   var exported_ptr = IntPtr.Zero;
   vars.foundPointers = false;
   byte[] marker = Encoding.ASCII.GetBytes("UnLiStEdStRaTs_JaK1" + Char.MinValue);
@@ -275,13 +276,15 @@ init {
     sw.Reset();
     return false;
   }
+  vars.DebugOutput(String.Format("Found AutoSplittingInfo struct - {0}", exported_ptr.ToString("x8")), true);
 
   // The offset to the GOAL struct is stored in a u64 next to the marker!
   var goal_struct_ptr = new IntPtr(memory.ReadValue<long>(exported_ptr + 4));
-  if (goal_struct_ptr == IntPtr.Zero) {
-    vars.DebugOutput("Could not locate GOAL struct from marker, old version of gk.exe? Failing!", true);
+  while (goal_struct_ptr == IntPtr.Zero) {
+    vars.DebugOutput("Could not find pointer to GOAL struct, game still loading? Retrying in 1000ms...!", true);
+    Thread.Sleep(1000);
     sw.Reset();
-    return false;
+    throw new Exception("Could not find pointer to GOAL struct, game still loading? Retrying...");
   }
   Action<MemoryWatcherList, IntPtr, List<Dictionary<String, dynamic>>> AddMemoryWatchers = (memList, bPtr, options) => {
     foreach (Dictionary<String, dynamic> option in options) {
