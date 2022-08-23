@@ -115,14 +115,15 @@ startup {
 
   // Swamp
   vars.swampResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.swampResolutions, "res_swamp_billy", structByteIdx++, typeof(byte), 1, false, "swamp_billy", false);
-  AddOption(vars.swampResolutions, "res_swamp_flutflut", structByteIdx++, typeof(byte), 1, false, "swamp_flutflut", false);
-  AddOption(vars.swampResolutions, "res_swamp_battle", structByteIdx++, typeof(byte), 1, false, "swamp_battle", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_1", structByteIdx++, typeof(byte), 1, false, "swamp_tether_1", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_2", structByteIdx++, typeof(byte), 1, false, "swamp_tether_2", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_3", structByteIdx++, typeof(byte), 1, false, "swamp_tether_3", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_4", structByteIdx++, typeof(byte), 1, false, "swamp_tether_4", false);
-  AddOption(vars.swampResolutions, "res_swamp_buzzer", structByteIdx++, typeof(byte), 1, false, "swamp_buzzer", false);
+  AddOption(vars.swampResolutions, "res_swamp_billy", structByteIdx++, typeof(byte), 1, false, "Protect Farthy's Snacks", false);
+  AddOption(vars.swampResolutions, "res_swamp_flutflut", structByteIdx++, typeof(byte), 1, false, "Ride the Flut Flut", false);
+  AddOption(vars.swampResolutions, "res_swamp_battle", structByteIdx++, typeof(byte), 1, false, "Defeat the Lurker Ambush", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_1", structByteIdx++, typeof(byte), 1, false, "Break the first tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_2", structByteIdx++, typeof(byte), 1, false, "Break the second tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_3", structByteIdx++, typeof(byte), 1, false, "Break the third tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_4", structByteIdx++, typeof(byte), 1, false, "Break the fourth tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  //While this is a "need res task" I think its more clear if we move it to a cutscenes category and rename this category "Power cells" Or something
   AddOption(vars.swampResolutions, "res_swamp_arm", structByteIdx++, typeof(byte), 1, false, "swamp_arm", false);
   settings.Add("jak1_need_res_swamp", true, "Swamp", "jak1_need_res");
   AddToSettings(vars.swampResolutions, "jak1_need_res_swamp");
