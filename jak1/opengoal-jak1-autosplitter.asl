@@ -131,14 +131,14 @@ startup {
 
   // Sunken
   vars.sunkenResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.sunkenResolutions, "res_sunken_platforms", structByteIdx++, typeof(byte), 1, false, "sunken_platforms", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_pipe", structByteIdx++, typeof(byte), 1, false, "sunken_pipe", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_slide", structByteIdx++, typeof(byte), 1, false, "sunken_slide", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_room", structByteIdx++, typeof(byte), 1, false, "sunken_room", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_sharks", structByteIdx++, typeof(byte), 1, false, "sunken_sharks", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_buzzer", structByteIdx++, typeof(byte), 1, false, "sunken_buzzer", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_top_of_helix", structByteIdx++, typeof(byte), 1, false, "sunken_top_of_helix", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_spinning_room", structByteIdx++, typeof(byte), 1, false, "sunken_spinning_room", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_platforms", structByteIdx++, typeof(byte), 1, false, "Match the Platform Colors", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_pipe", structByteIdx++, typeof(byte), 1, false, "Follow the Colored Pipes", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_slide", structByteIdx++, typeof(byte), 1, false, "Reach the Bottom of the City", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_room", structByteIdx++, typeof(byte), 1, false, "Raise the Chamber", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_sharks", structByteIdx++, typeof(byte), 1, false, "Quickly Cross the Dangerous Pool", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_top_of_helix", structByteIdx++, typeof(byte), 1, false, "Climb the Slide Tube", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_spinning_room", structByteIdx++, typeof(byte), 1, false, "Reach the Center of the Complex", false);
   settings.Add("jak1_need_res_sunken", true, "Sunken", "jak1_need_res");
   AddToSettings(vars.sunkenResolutions, "jak1_need_res_sunken");
   vars.optionLists.Add(vars.sunkenResolutions);
