@@ -39,64 +39,64 @@ startup {
 
   // Training
   vars.trainingResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.trainingResolutions, "res_training_gimmie", structByteIdx++, typeof(byte), 1, false, "training_gimmie", false);
-  AddOption(vars.trainingResolutions, "res_training_door", structByteIdx++, typeof(byte), 1, false, "training_door", false);
-  AddOption(vars.trainingResolutions, "res_training_climb", structByteIdx++, typeof(byte), 1, false, "training_climb", false);
-  AddOption(vars.trainingResolutions, "res_training_buzzer", structByteIdx++, typeof(byte), 1, false, "training_buzzer", false);
+  AddOption(vars.trainingResolutions, "res_training_gimmie", structByteIdx++, typeof(byte), 1, false, "Find the Cell on the Path", false);
+  AddOption(vars.trainingResolutions, "res_training_door", structByteIdx++, typeof(byte), 1, false, "Open the Precursor Door", false);
+  AddOption(vars.trainingResolutions, "res_training_climb", structByteIdx++, typeof(byte), 1, false, "Climb up the Cliff", false);
+  AddOption(vars.trainingResolutions, "res_training_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   settings.Add("jak1_need_res_training", true, "Training", "jak1_need_res");
   AddToSettings(vars.trainingResolutions, "jak1_need_res_training");
   vars.optionLists.Add(vars.trainingResolutions);
 
   // Jungle
   vars.jungleResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.jungleResolutions, "res_jungle_eggtop", structByteIdx++, typeof(byte), 1, false, "jungle_eggtop", false);
-  AddOption(vars.jungleResolutions, "res_jungle_lurkerm", structByteIdx++, typeof(byte), 1, false, "res_jungle_lurkerm", false);
-  AddOption(vars.jungleResolutions, "res_jungle_tower", structByteIdx++, typeof(byte), 1, false, "res_jungle_tower", false);
-  AddOption(vars.jungleResolutions, "res_jungle_fishgame", structByteIdx++, typeof(byte), 1, false, "res_jungle_fishgame", false);
-  AddOption(vars.jungleResolutions, "res_jungle_plant", structByteIdx++, typeof(byte), 1, false, "res_jungle_plant", false);
-  AddOption(vars.jungleResolutions, "res_jungle_buzzer", structByteIdx++, typeof(byte), 1, false, "res_jungle_buzzer", false);
-  AddOption(vars.jungleResolutions, "res_jungle_canyon_end", structByteIdx++, typeof(byte), 1, false, "res_jungle_canyon_end", false);
-  AddOption(vars.jungleResolutions, "res_jungle_temple_door", structByteIdx++, typeof(byte), 1, false, "res_jungle_temple_door", false);
+  AddOption(vars.jungleResolutions, "res_jungle_eggtop", structByteIdx++, typeof(byte), 1, false, "Find the Blue Vent Switch", false);
+  AddOption(vars.jungleResolutions, "res_jungle_lurkerm", structByteIdx++, typeof(byte), 1, false, "Connect the Eco Beams", false);
+  AddOption(vars.jungleResolutions, "res_jungle_tower", structByteIdx++, typeof(byte), 1, false, "Get to the Top of the Temple", false);
+  AddOption(vars.jungleResolutions, "res_jungle_fishgame", structByteIdx++, typeof(byte), 1, false, "Catch 200 Pounds of Fish", false);
+  AddOption(vars.jungleResolutions, "res_jungle_plant", structByteIdx++, typeof(byte), 1, false, "Defeat the Dark Eco Plant", false);
+  AddOption(vars.jungleResolutions, "res_jungle_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.jungleResolutions, "res_jungle_canyon_end", structByteIdx++, typeof(byte), 1, false, "Follow the canyon to the Sea", false);
+  AddOption(vars.jungleResolutions, "res_jungle_temple_door", structByteIdx++, typeof(byte), 1, false, "Open the Locked Temple Door", false);
   settings.Add("jak1_need_res_jungle", true, "Jungle", "jak1_need_res");
   AddToSettings(vars.jungleResolutions, "jak1_need_res_jungle");
   vars.optionLists.Add(vars.jungleResolutions);
 
   // Village 1
   vars.village1Resolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.village1Resolutions, "res_village1_yakow", structByteIdx++, typeof(byte), 1, false, "village1_yakow", false);
-  AddOption(vars.village1Resolutions, "res_village1_mayor_money", structByteIdx++, typeof(byte), 1, false, "village1_mayor_money", false);
-  AddOption(vars.village1Resolutions, "res_village1_uncle_money", structByteIdx++, typeof(byte), 1, false, "village1_uncle_money", false);
-  AddOption(vars.village1Resolutions, "res_village1_oracle_money1", structByteIdx++, typeof(byte), 1, false, "village1_oracle_money1", false);
-  AddOption(vars.village1Resolutions, "res_village1_oracle_money2", structByteIdx++, typeof(byte), 1, false, "village1_oracle_money2", false);
-  AddOption(vars.village1Resolutions, "res_village1_buzzer", structByteIdx++, typeof(byte), 1, false, "village1_buzzer", false);
+  AddOption(vars.village1Resolutions, "res_village1_yakow", structByteIdx++, typeof(byte), 1, false, "Herd the Yakos into their pen", false);
+  AddOption(vars.village1Resolutions, "res_village1_mayor_money", structByteIdx++, typeof(byte), 1, false, "Bring 90 orbs to the Mayor", false);
+  AddOption(vars.village1Resolutions, "res_village1_uncle_money", structByteIdx++, typeof(byte), 1, false, "Bring 90 orbs to your Uncle", false);
+  AddOption(vars.village1Resolutions, "res_village1_oracle_money1", structByteIdx++, typeof(byte), 1, false, "Bring 120 orbs to the Oracle", false);
+  AddOption(vars.village1Resolutions, "res_village1_oracle_money2", structByteIdx++, typeof(byte), 1, false, "Bring another 120 orbs to the Oracle", false);
+  AddOption(vars.village1Resolutions, "res_village1_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   settings.Add("jak1_need_res_village1", true, "Village 1", "jak1_need_res");
   AddToSettings(vars.village1Resolutions, "jak1_need_res_village1");
   vars.optionLists.Add(vars.village1Resolutions);
 
   // Beach
   vars.beachResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.beachResolutions, "res_beach_ecorocks", structByteIdx++, typeof(byte), 1, false, "beach_ecorocks", false);
-  AddOption(vars.beachResolutions, "res_beach_pelican", structByteIdx++, typeof(byte), 1, false, "beach_pelican", false);
-  AddOption(vars.beachResolutions, "res_beach_flutflut", structByteIdx++, typeof(byte), 1, false, "beach_flutflut", false);
-  AddOption(vars.beachResolutions, "res_beach_seagull", structByteIdx++, typeof(byte), 1, false, "beach_seagull", false);
-  AddOption(vars.beachResolutions, "res_beach_cannon", structByteIdx++, typeof(byte), 1, false, "beach_cannon", false);
-  AddOption(vars.beachResolutions, "res_beach_buzzer", structByteIdx++, typeof(byte), 1, false, "beach_buzzer", false);
-  AddOption(vars.beachResolutions, "res_beach_gimmie", structByteIdx++, typeof(byte), 1, false, "beach_gimmie", false);
-  AddOption(vars.beachResolutions, "res_beach_sentinel", structByteIdx++, typeof(byte), 1, false, "beach_sentinel", false);
+  AddOption(vars.beachResolutions, "res_beach_ecorocks", structByteIdx++, typeof(byte), 1, false, "Unblock the eco harvesters", false);
+  AddOption(vars.beachResolutions, "res_beach_pelican", structByteIdx++, typeof(byte), 1, false, "Get the power cell from the pelican", false);
+  AddOption(vars.beachResolutions, "res_beach_flutflut", structByteIdx++, typeof(byte), 1, false, "Push the Flut Flut egg off the cliff", false);
+  AddOption(vars.beachResolutions, "res_beach_seagull", structByteIdx++, typeof(byte), 1, false, "Chase the seagulls", false);
+  AddOption(vars.beachResolutions, "res_beach_cannon", structByteIdx++, typeof(byte), 1, false, "Launch up to the cannon tower", false);
+  AddOption(vars.beachResolutions, "res_beach_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.beachResolutions, "res_beach_gimmie", structByteIdx++, typeof(byte), 1, false, "Explore the Beach", false);
+  AddOption(vars.beachResolutions, "res_beach_sentinel", structByteIdx++, typeof(byte), 1, false, "Climb the Sentinel", false);
   settings.Add("jak1_need_res_beach", true, "Beach", "jak1_need_res");
   AddToSettings(vars.beachResolutions, "jak1_need_res_beach");
   vars.optionLists.Add(vars.beachResolutions);
 
   // Misty
   vars.mistyResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.mistyResolutions, "res_misty_muse", structByteIdx++, typeof(byte), 1, false, "misty_muse", false);
-  AddOption(vars.mistyResolutions, "res_misty_boat", structByteIdx++, typeof(byte), 1, false, "misty_boat", false);
-  AddOption(vars.mistyResolutions, "res_misty_warehouse", structByteIdx++, typeof(byte), 1, false, "misty_warehouse", false);
-  AddOption(vars.mistyResolutions, "res_misty_cannon", structByteIdx++, typeof(byte), 1, false, "misty_cannon", false);
-  AddOption(vars.mistyResolutions, "res_misty_bike", structByteIdx++, typeof(byte), 1, false, "misty_bike", false);
-  AddOption(vars.mistyResolutions, "res_misty_buzzer", structByteIdx++, typeof(byte), 1, false, "misty_buzzer", false);
-  AddOption(vars.mistyResolutions, "res_misty_bike_jump", structByteIdx++, typeof(byte), 1, false, "misty_bike_jump", false);
-  AddOption(vars.mistyResolutions, "res_misty_eco_challenge", structByteIdx++, typeof(byte), 1, false, "misty_eco_challenge", false);
+  AddOption(vars.mistyResolutions, "res_misty_muse", structByteIdx++, typeof(byte), 1, false, "Catch the Sculptors Muse", false);
+  AddOption(vars.mistyResolutions, "res_misty_boat", structByteIdx++, typeof(byte), 1, false, "Climb the Lurker Ship", false);
+  AddOption(vars.mistyResolutions, "res_misty_warehouse", structByteIdx++, typeof(byte), 1, false, "Return to the Dark Eco Pool", false);
+  AddOption(vars.mistyResolutions, "res_misty_cannon", structByteIdx++, typeof(byte), 1, false, "Stop the Cannon", false);
+  AddOption(vars.mistyResolutions, "res_misty_bike", structByteIdx++, typeof(byte), 1, false, "Destroy the Balloon Lurkers", false);
+  AddOption(vars.mistyResolutions, "res_misty_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.mistyResolutions, "res_misty_bike_jump", structByteIdx++, typeof(byte), 1, false, "Use Zoomer to Reach Power Cell", false);
+  AddOption(vars.mistyResolutions, "res_misty_eco_challenge", structByteIdx++, typeof(byte), 1, false, "Use Blue Eco to Reach Power Cell", false);
   settings.Add("jak1_need_res_misty", true, "Misty", "jak1_need_res");
   AddToSettings(vars.mistyResolutions, "jak1_need_res_misty");
   vars.optionLists.Add(vars.mistyResolutions);
@@ -173,8 +173,8 @@ startup {
 
   // Fire Canyon
   vars.firecanyonResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.firecanyonResolutions, "res_firecanyon_buzzer", structByteIdx++, typeof(byte), 1, false, "firecanyon_buzzer", false);
-  AddOption(vars.firecanyonResolutions, "res_firecanyon_end", structByteIdx++, typeof(byte), 1, false, "firecanyon_end", false);
+  AddOption(vars.firecanyonResolutions, "res_firecanyon_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.firecanyonResolutions, "res_firecanyon_end", structByteIdx++, typeof(byte), 1, false, "Reach the End of Fire Canyon", false);
   settings.Add("jak1_need_res_firecanyon", true, "Fire Canyon", "jak1_need_res");
   AddToSettings(vars.firecanyonResolutions, "jak1_need_res_firecanyon");
   vars.optionLists.Add(vars.firecanyonResolutions);
