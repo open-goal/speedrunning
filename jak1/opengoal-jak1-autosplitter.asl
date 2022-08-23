@@ -63,7 +63,7 @@ startup {
 
   // Village 1
   vars.village1Resolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.village1Resolutions, "res_village1_yakow", structByteIdx++, typeof(byte), 1, false, "Herd the Yakos into their pen", false);
+  AddOption(vars.village1Resolutions, "res_village1_yakow", structByteIdx++, typeof(byte), 1, false, "Herd the Yakows into their pen", false);
   AddOption(vars.village1Resolutions, "res_village1_mayor_money", structByteIdx++, typeof(byte), 1, false, "Bring 90 orbs to the Mayor", false);
   AddOption(vars.village1Resolutions, "res_village1_uncle_money", structByteIdx++, typeof(byte), 1, false, "Bring 90 orbs to your Uncle", false);
   AddOption(vars.village1Resolutions, "res_village1_oracle_money1", structByteIdx++, typeof(byte), 1, false, "Bring 120 orbs to the Oracle", false);
@@ -159,14 +159,15 @@ startup {
 
   // Snowy
   vars.snowyResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.snowyResolutions, "res_snow_eggtop", structByteIdx++, typeof(byte), 1, false, "snow_eggtop", false);
-  AddOption(vars.snowyResolutions, "res_snow_ram", structByteIdx++, typeof(byte), 1, false, "snow_ram", false);
-  AddOption(vars.snowyResolutions, "res_snow_fort", structByteIdx++, typeof(byte), 1, false, "snow_fort", false);
-  AddOption(vars.snowyResolutions, "res_snow_ball", structByteIdx++, typeof(byte), 1, false, "snow_ball", false);
-  AddOption(vars.snowyResolutions, "res_snow_bunnies", structByteIdx++, typeof(byte), 1, false, "snow_bunnies", false);
-  AddOption(vars.snowyResolutions, "res_snow_buzzer", structByteIdx++, typeof(byte), 1, false, "snow_buzzer", false);
-  AddOption(vars.snowyResolutions, "res_snow_bumpers", structByteIdx++, typeof(byte), 1, false, "snow_bumpers", false);
-  AddOption(vars.snowyResolutions, "res_snow_cage", structByteIdx++, typeof(byte), 1, false, "snow_cage", false);
+  AddOption(vars.snowyResolutions, "res_snow_eggtop", structByteIdx++, typeof(byte), 1, false, "Find the Yellow Vent switch", false);
+  AddOption(vars.snowyResolutions, "res_snow_ram", structByteIdx++, typeof(byte), 1, false, "Stop the 3 Lurker Glacier Troops", false);
+  AddOption(vars.snowyResolutions, "res_snow_fort", structByteIdx++, typeof(byte), 1, false, "Get through the Lurker Fort", false);
+  AddOption(vars.snowyResolutions, "res_snow_ball", structByteIdx++, typeof(byte), 1, false, "Open the Lurker Fort Gate", false);
+  AddOption(vars.snowyResolutions, "res_snow_bunnies", structByteIdx++, typeof(byte), 1, false, "Survive the Lurker Infested Cave", false);
+  AddOption(vars.snowyResolutions, "res_snow_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.snowyResolutions, "res_snow_bumpers", structByteIdx++, typeof(byte), 1, false, "Deactivate the Precursor Blockers", false);
+  AddOption(vars.snowyResolutions, "res_snow_cage", structByteIdx++, typeof(byte), 1, false, "Opent the Frozen Crate", false);
+  //The task below is unsed in retail versions of the game.
   AddOption(vars.snowyResolutions, "res_red_eggtop", structByteIdx++, typeof(byte), 1, false, "red_eggtop", false);
   settings.Add("jak1_need_res_snowy", true, "Snowy Mountain", "jak1_need_res");
   AddToSettings(vars.snowyResolutions, "jak1_need_res_snowy");
