@@ -234,6 +234,7 @@ startup {
   vars.lavatubeResolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.lavatubeResolutions, "res_lavatube_end", structByteIdx++, typeof(byte), 1, false, "Reach the end of the Lava Tube", false);
   AddOption(vars.lavatubeResolutions, "res_lavatube_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  //This task below does not go with a in game Power Cell
   AddOption(vars.lavatubeResolutions, "res_lavatube_balls", structByteIdx++, typeof(byte), 1, false, "lavatube_balls", false);
   settings.Add("jak1_need_res_lavatube", true, "Lava Tube", "jak1_need_res");
   AddToSettings(vars.lavatubeResolutions, "jak1_need_res_lavatube");
