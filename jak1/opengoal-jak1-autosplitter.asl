@@ -41,7 +41,6 @@ startup {
 
   // Training
   vars.trainingResolutions = new List<Dictionary<String, dynamic>>();
-
   AddOption(vars.trainingResolutions, "res_training_gimmie", structByteIdx++, typeof(byte), 1, false, "Find the Cell on the Path", false);
   AddOption(vars.trainingResolutions, "res_training_door", structByteIdx++, typeof(byte), 1, false, "Open the Precursor Door", false);
   AddOption(vars.trainingResolutions, "res_training_climb", structByteIdx++, typeof(byte), 1, false, "Climb up the Cliff", false);
@@ -264,26 +263,32 @@ AddOption(vars.miscallenousTasks, "unk_finalboss_movies", structByteIdx++, typeo
 
 init {
   vars.DebugOutput("Running {init} looking for `gk.exe`", true);
-  var sw = new Stopwatch(); sw.Start();
+  var sw = new Stopwatch();
+  sw.Start();
   var exported_ptr = IntPtr.Zero;
   vars.foundPointers = false;
   byte[] marker = Encoding.ASCII.GetBytes("UnLiStEdStRaTs_JaK1" + Char.MinValue);
   vars.debugTick = 0;
-
   vars.DebugOutput(String.Format("Base Addr - {0}", modules.First().BaseAddress.ToString("x8")), true);
-  foreach (var page in game.MemoryPages(true)) {
-    var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
-    if ((exported_ptr = scanner.Scan(new SigScanTarget(marker.Length, marker))) != IntPtr.Zero) {
-      break;
-    }
-  }
+  exported_ptr = new SignatureScanner(game, modules.First().BaseAddress, modules.First().ModuleMemorySize).Scan(
+    new SigScanTarget(marker.Length, marker)
+  );
 
   if (exported_ptr == IntPtr.Zero) {
     vars.DebugOutput("Could not find the AutoSplittingInfo struct, old version of gk.exe? Failing!", true);
     sw.Reset();
     return false;
   }
+  vars.DebugOutput(String.Format("Found AutoSplittingInfo struct - {0}", exported_ptr.ToString("x8")), true);
 
+  // The offset to the GOAL struct is stored in a u64 next to the marker!
+  var goal_struct_ptr = new IntPtr(memory.ReadValue<long>(exported_ptr + 4));
+  while (goal_struct_ptr == IntPtr.Zero) {
+    vars.DebugOutput("Could not find pointer to GOAL struct, game still loading? Retrying in 1000ms...!", true);
+    Thread.Sleep(1000);
+    sw.Reset();
+    throw new Exception("Could not find pointer to GOAL struct, game still loading? Retrying...");
+  }
   Action<MemoryWatcherList, IntPtr, List<Dictionary<String, dynamic>>> AddMemoryWatchers = (memList, bPtr, options) => {
     foreach (Dictionary<String, dynamic> option in options) {
       var finalOffset = bPtr + (option["offset"]);
@@ -297,13 +302,13 @@ init {
   };
 
   var watchers = new MemoryWatcherList{
-    new MemoryWatcher<uint>(exported_ptr + 212) { Name = "currentGameHash" }
+    new MemoryWatcher<uint>(goal_struct_ptr + 212) { Name = "currentGameHash" }
   };
 
   // Init current game has in case script is loaded while game is already started
   watchers["currentGameHash"].Update(game);
 
-  var jak1_need_res_bptr = exported_ptr + 424; // bytes
+  var jak1_need_res_bptr = goal_struct_ptr + 424; // bytes
   foreach (List<Dictionary<String, dynamic>> optionList in vars.optionLists) {
     AddMemoryWatchers(watchers, jak1_need_res_bptr, optionList);
   }
@@ -311,7 +316,7 @@ init {
   vars.watchers = watchers;
   sw.Stop();
   vars.DebugOutput("Script Initialized, Game Compatible.", true);
-  vars.DebugOutput(String.Format("Found the exported struct at {0}", exported_ptr.ToString("x8")), true);
+  vars.DebugOutput(String.Format("Found the exported struct at {0}", goal_struct_ptr.ToString("x8")), true);
   vars.DebugOutput(String.Format("It took {0} ms", sw.ElapsedMilliseconds), true);
 }
 
