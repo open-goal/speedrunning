@@ -193,14 +193,14 @@ startup {
 
   // Village 3
   vars.village3Resolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.village3Resolutions, "res_village3_extra1", structByteIdx++, typeof(byte), 1, false, "village3_extra1", false);
-  AddOption(vars.village3Resolutions, "res_village3_buzzer", structByteIdx++, typeof(byte), 1, false, "village3_buzzer", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money1", structByteIdx++, typeof(byte), 1, false, "village3_miner_money1", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money2", structByteIdx++, typeof(byte), 1, false, "village3_miner_money2", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money3", structByteIdx++, typeof(byte), 1, false, "village3_miner_money3", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money4", structByteIdx++, typeof(byte), 1, false, "village3_miner_money4", false);
-  AddOption(vars.village3Resolutions, "res_village3_oracle_money1", structByteIdx++, typeof(byte), 1, false, "village3_oracle_money1", false);
-  AddOption(vars.village3Resolutions, "res_village3_oracle_money2", structByteIdx++, typeof(byte), 1, false, "village3_oracle_money2", false);
+  AddOption(vars.village3Resolutions, "res_village3_extra1", structByteIdx++, typeof(byte), 1, false, "Find the Hidden Power Cell", false);
+  AddOption(vars.village3Resolutions, "res_village3_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money1", structByteIdx++, typeof(byte), 1, false, "Bring 90 Orbs to the Miners once", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money2", structByteIdx++, typeof(byte), 1, false, "Bring 90 Orbs to the Miners twice", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money3", structByteIdx++, typeof(byte), 1, false, "Bring 90 Orbs to the Miners three times", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money4", structByteIdx++, typeof(byte), 1, false, "Bring 90 Orbs to the Miners four times", false);
+  AddOption(vars.village3Resolutions, "res_village3_oracle_money1", structByteIdx++, typeof(byte), 1, false, "Bring 120 Orbs to the Oracle", false);
+  AddOption(vars.village3Resolutions, "res_village3_oracle_money2", structByteIdx++, typeof(byte), 1, false, "Bring another 120 Orbs to the Oracle", false);
   settings.Add("jak1_need_res_village3", true, "Village 3", "jak1_need_res");
   AddToSettings(vars.village3Resolutions, "jak1_need_res_village3");
   vars.optionLists.Add(vars.village3Resolutions);
