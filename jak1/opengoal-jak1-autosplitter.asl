@@ -221,10 +221,10 @@ startup {
 
   // Ogre Boss
   vars.ogrebossResolutons = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.ogrebossResolutons, "res_ogre_boss", structByteIdx++, typeof(byte), 1, false, "ogre_boss", false);
-  AddOption(vars.ogrebossResolutons, "res_ogre_end", structByteIdx++, typeof(byte), 1, false, "ogre_end", false);
-  AddOption(vars.ogrebossResolutons, "res_ogre_buzzer", structByteIdx++, typeof(byte), 1, false, "ogre_buzzer", false);
-  AddOption(vars.ogrebossResolutons, "res_ogre_secret", structByteIdx++, typeof(byte), 1, false, "ogre_secret", false);
+  AddOption(vars.ogrebossResolutons, "res_ogre_boss", structByteIdx++, typeof(byte), 1, false, "Defeat Klaww", false);
+  AddOption(vars.ogrebossResolutons, "res_ogre_end", structByteIdx++, typeof(byte), 1, false, "Reach the End of the Mountain Pass", false);
+  AddOption(vars.ogrebossResolutons, "res_ogre_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.ogrebossResolutons, "res_ogre_secret", structByteIdx++, typeof(byte), 1, false, "Find the Hidden Power Cell", false);
   settings.Add("jak1_need_res_ogreboss", true, "Ogre Boss", "jak1_need_res");
   AddToSettings(vars.ogrebossResolutons, "jak1_need_res_ogreboss");
   vars.optionLists.Add(vars.ogrebossResolutons);
