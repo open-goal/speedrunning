@@ -251,8 +251,8 @@ startup {
   settings.Add("jak1_misc_tasks", true, "Miscellaneous Tasks");
   vars.miscallenousTasks = new List<Dictionary<String, dynamic>>();
   AddOption(vars.miscallenousTasks, "int_finalboss_movies", structByteIdx++, typeof(byte), 1, true, "int_finalboss_movies", false);
-  AddOption(vars.miscallenousTasks, "unk_finalboss_movies", structByteIdx++, typeof(byte), 1, false, "unk_finalboss_movies", false);
-  AddOption(vars.miscallenousTasks, "int_jungle_fishgame", structByteIdx++, typeof(byte), 1, false, "int_jungle_fishgame", false);
+AddOption(vars.miscallenousTasks, "unk_finalboss_movies", structByteIdx++, typeof(byte), 1, false, "Light Eco?!?! That could be the stuff to change me back!", false);
+  AddOption(vars.miscallenousTasks, "int_jungle_fishgame", structByteIdx++, typeof(byte), 1, false, "Talk to Fisherman", false);
   AddToSettings(vars.miscallenousTasks, "jak1_misc_tasks");
   vars.optionLists.Add(vars.miscallenousTasks);
 
