@@ -145,14 +145,14 @@ startup {
 
   // Rolling
   vars.rollingResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.rollingResolutions, "res_rolling_race", structByteIdx++, typeof(byte), 1, false, "rolling_race", false);
-  AddOption(vars.rollingResolutions, "res_rolling_robbers", structByteIdx++, typeof(byte), 1, false, "rolling_robbers", false);
-  AddOption(vars.rollingResolutions, "res_rolling_moles", structByteIdx++, typeof(byte), 1, false, "rolling_moles", false);
-  AddOption(vars.rollingResolutions, "res_rolling_plants", structByteIdx++, typeof(byte), 1, false, "rolling_plants", false);
-  AddOption(vars.rollingResolutions, "res_rolling_lake", structByteIdx++, typeof(byte), 1, false, "rolling_lake", false);
-  AddOption(vars.rollingResolutions, "res_rolling_buzzer", structByteIdx++, typeof(byte), 1, false, "rolling_buzzer", false);
-  AddOption(vars.rollingResolutions, "res_rolling_ring_chase_1", structByteIdx++, typeof(byte), 1, false, "rolling_ring_chase_1", false);
-  AddOption(vars.rollingResolutions, "res_rolling_ring_chase_2", structByteIdx++, typeof(byte), 1, false, "rolling_ring_chase_2", false);
+  AddOption(vars.rollingResolutions, "res_rolling_race", structByteIdx++, typeof(byte), 1, false, "Beat Record Time on the Gorge", false);
+  AddOption(vars.rollingResolutions, "res_rolling_robbers", structByteIdx++, typeof(byte), 1, false, "Catch the Flying Lurkers", false);
+  AddOption(vars.rollingResolutions, "res_rolling_moles", structByteIdx++, typeof(byte), 1, false, "Herd the Moles into their Hole", false);
+  AddOption(vars.rollingResolutions, "res_rolling_plants", structByteIdx++, typeof(byte), 1, false, "Cure Dark Eco Infected Plants", false);
+  AddOption(vars.rollingResolutions, "res_rolling_lake", structByteIdx++, typeof(byte), 1, false, "Get the Power Cell over the Lake", false);
+  AddOption(vars.rollingResolutions, "res_rolling_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.rollingResolutions, "res_rolling_ring_chase_1", structByteIdx++, typeof(byte), 1, false, "Navigate the Purple Precursor Rings", false);
+  AddOption(vars.rollingResolutions, "res_rolling_ring_chase_2", structByteIdx++, typeof(byte), 1, false, "Navigate the Blue Precursor Rings", false);
   settings.Add("jak1_need_res_rolling", true, "Rolling", "jak1_need_res");
   AddToSettings(vars.rollingResolutions, "jak1_need_res_rolling");
   vars.optionLists.Add(vars.rollingResolutions);
