@@ -5,11 +5,10 @@ state("gk") {
 // Runs once, the only place you can add custom settings, before the process is connected to!
 startup {
   // NOTE: Enable Log Output
-  var DebugEnabled = false;
-  Action<string> DebugOutput = (text) => {
-      if (DebugEnabled) {
-          print("[OpenGOAL-Jak1] " + text);
-      }
+  Action<string, bool> DebugOutput = (text, setting) => {
+    if (setting) {
+      print("[OpenGOAL-Jak1] " + text);
+    }
   };
   vars.DebugOutput = DebugOutput;
 
@@ -31,6 +30,9 @@ startup {
     }
   };
 
+  settings.Add("asl_settings", true, "Autosplitter Settings");
+  settings.Add("asl_settings_debug", false, "Enable Debug Logs", "asl_settings");
+
   // Need Resolution Splits - offset is relative from the need resolution block of the struct
   settings.Add("jak1_need_res", true, "Need Resolution");
   var structByteIdx = 0;
@@ -39,6 +41,7 @@ startup {
 
   // Training
   vars.trainingResolutions = new List<Dictionary<String, dynamic>>();
+
   AddOption(vars.trainingResolutions, "res_training_gimmie", structByteIdx++, typeof(byte), 1, false, "Find the Cell on the Path", false);
   AddOption(vars.trainingResolutions, "res_training_door", structByteIdx++, typeof(byte), 1, false, "Open the Precursor Door", false);
   AddOption(vars.trainingResolutions, "res_training_climb", structByteIdx++, typeof(byte), 1, false, "Climb up the Cliff", false);
@@ -256,18 +259,18 @@ startup {
   // Treat this one as special, so we can ensure the timer ends no matter what!
   vars.finalSplitTask = vars.miscallenousTasks[0];
 
-  vars.DebugOutput("Finished {startup}");
+  vars.DebugOutput("Finished {startup}", true);
 }
 
 init {
-  vars.DebugOutput("Running {init} looking for `gk.exe`");
+  vars.DebugOutput("Running {init} looking for `gk.exe`", true);
   var sw = new Stopwatch(); sw.Start();
   var exported_ptr = IntPtr.Zero;
   vars.foundPointers = false;
   byte[] marker = Encoding.ASCII.GetBytes("UnLiStEdStRaTs_JaK1" + Char.MinValue);
   vars.debugTick = 0;
 
-  vars.DebugOutput(String.Format("Base Addr - {0}", modules.First().BaseAddress.ToString("x8")));
+  vars.DebugOutput(String.Format("Base Addr - {0}", modules.First().BaseAddress.ToString("x8")), true);
   foreach (var page in game.MemoryPages(true)) {
     var scanner = new SignatureScanner(game, page.BaseAddress, (int)page.RegionSize);
     if ((exported_ptr = scanner.Scan(new SigScanTarget(marker.Length, marker))) != IntPtr.Zero) {
@@ -276,7 +279,8 @@ init {
   }
 
   if (exported_ptr == IntPtr.Zero) {
-    vars.DebugOutput("Could not find the AutoSplittingInfo struct, old version of gk.exe? Failing!"); sw.Reset();
+    vars.DebugOutput("Could not find the AutoSplittingInfo struct, old version of gk.exe? Failing!", true);
+    sw.Reset();
     return false;
   }
 
@@ -287,7 +291,7 @@ init {
       memList.Add(new MemoryWatcher<byte>(finalOffset) { Name = option["id"] });
       if (option["debug"] == true) {
         memList[option["id"]].Update(game);
-        vars.DebugOutput(String.Format("Debug ({0}) -> ptr [{1}]; val [{2}]", option["id"], finalOffset.ToString("x8"), memList[option["id"]].Current));
+        vars.DebugOutput(String.Format("Debug ({0}) -> ptr [{1}]; val [{2}]", option["id"], finalOffset.ToString("x8"), memList[option["id"]].Current), true);
       }
     }
   };
@@ -306,9 +310,9 @@ init {
   vars.foundPointers = true;
   vars.watchers = watchers;
   sw.Stop();
-  vars.DebugOutput("Script Initialized, Game Compatible.");
-  vars.DebugOutput(String.Format("Found the exported struct at {0}", exported_ptr.ToString("x8")));
-  vars.DebugOutput(String.Format("It took {0} ms", sw.ElapsedMilliseconds));
+  vars.DebugOutput("Script Initialized, Game Compatible.", true);
+  vars.DebugOutput(String.Format("Found the exported struct at {0}", exported_ptr.ToString("x8")), true);
+  vars.DebugOutput(String.Format("It took {0} ms", sw.ElapsedMilliseconds), true);
 }
 
 update {
@@ -321,8 +325,8 @@ update {
 
 reset {
   if (vars.watchers["currentGameHash"].Current != 0 && vars.watchers["currentGameHash"].Current != vars.watchers["currentGameHash"].Old) {
-    vars.DebugOutput("Resetting!");
-    vars.DebugOutput(String.Format("Reset -> Old: {0}, Curr: {1}", vars.watchers["currentGameHash"].Old, vars.watchers["currentGameHash"].Current));
+    vars.DebugOutput("Resetting!", settings["asl_settings_debug"]);
+    vars.DebugOutput(String.Format("Reset -> Old: {0}, Curr: {1}", vars.watchers["currentGameHash"].Old, vars.watchers["currentGameHash"].Current), settings["asl_settings_debug"]);
     return true;
   }
   return false;
@@ -330,8 +334,8 @@ reset {
 
 start {
   if (vars.watchers["currentGameHash"].Current != 0 && vars.watchers["currentGameHash"].Current != vars.watchers["currentGameHash"].Old) {
-    vars.DebugOutput("Starting!");
-    vars.DebugOutput(String.Format("Start -> Old: {0}, Curr: {1}", vars.watchers["currentGameHash"].Old, vars.watchers["currentGameHash"].Current));
+    vars.DebugOutput("Starting!", settings["asl_settings_debug"]);
+    vars.DebugOutput(String.Format("Start -> Old: {0}, Curr: {1}", vars.watchers["currentGameHash"].Old, vars.watchers["currentGameHash"].Current), settings["asl_settings_debug"]);
     return true;
   }
   return false;
@@ -351,7 +355,7 @@ split {
     foreach (Dictionary<String, dynamic> option in list) {
       var watcher = vars.watchers[option["id"]];
       if (option["debug"] && debugThisIter) {
-        vars.DebugOutput(String.Format("Debug ({0}) -> old [{1}]; current [{2}]", option["id"], watcher.Old, watcher.Current));
+        vars.DebugOutput(String.Format("Debug ({0}) -> old [{1}]; current [{2}]", option["id"], watcher.Old, watcher.Current), settings["asl_settings_debug"]);
       }
       if (settings[option["id"]]) {
         // if we don't care about the amount, split on any change
