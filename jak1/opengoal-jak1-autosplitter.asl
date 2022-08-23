@@ -103,12 +103,12 @@ startup {
 
   // Village 2
   vars.village2Resolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.village2Resolutions, "res_village2_gambler_money", structByteIdx++, typeof(byte), 1, false, "village2_gambler_money", false);
-  AddOption(vars.village2Resolutions, "res_village2_geologist_money", structByteIdx++, typeof(byte), 1, false, "village2_geologist_money", false);
-  AddOption(vars.village2Resolutions, "res_village2_warrior_money", structByteIdx++, typeof(byte), 1, false, "village2_warrior_money", false);
-  AddOption(vars.village2Resolutions, "res_village2_oracle_money1", structByteIdx++, typeof(byte), 1, false, "village2_oracle_money1", false);
-  AddOption(vars.village2Resolutions, "res_village2_oracle_money2", structByteIdx++, typeof(byte), 1, false, "village2_oracle_money2", false);
-  AddOption(vars.village2Resolutions, "res_village2_buzzer", structByteIdx++, typeof(byte), 1, false, "village2_buzzer", false);
+  AddOption(vars.village2Resolutions, "res_village2_gambler_money", structByteIdx++, typeof(byte), 1, false, "Bring 90 Orbs to the Gambler", false);
+  AddOption(vars.village2Resolutions, "res_village2_geologist_money", structByteIdx++, typeof(byte), 1, false, "Bring 90 Orbs to the Geologist", false);
+  AddOption(vars.village2Resolutions, "res_village2_warrior_money", structByteIdx++, typeof(byte), 1, false, "Bring 90 Orbs to the Warrior", false);
+  AddOption(vars.village2Resolutions, "res_village2_oracle_money1", structByteIdx++, typeof(byte), 1, false, "Bring 120 Orbs to the oracle", false);
+  AddOption(vars.village2Resolutions, "res_village2_oracle_money2", structByteIdx++, typeof(byte), 1, false, "Bring another 120 Orbs to the oracle", false);
+  AddOption(vars.village2Resolutions, "res_village2_buzzer", structByteIdx++, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   settings.Add("jak1_need_res_village2", true, "Village 2", "jak1_need_res");
   AddToSettings(vars.village2Resolutions, "jak1_need_res_village2");
   vars.optionLists.Add(vars.village2Resolutions);
