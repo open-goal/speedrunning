@@ -34,7 +34,7 @@ startup {
   settings.Add("asl_settings_debug", false, "Enable Debug Logs", "asl_settings");
 
   // Need Resolution Splits - offset is relative from the need resolution block of the struct
-  settings.Add("jak1_need_res", true, "Need Resolution");
+  settings.Add("jak1_need_res", true, "Levels");
   var structByteIdx = 0;
 
   vars.optionLists = new List<List<Dictionary<String, dynamic>>>();
@@ -45,24 +45,10 @@ startup {
   AddOption(vars.trainingResolutions, "res_training_door", 1, typeof(byte), 1, false, "Open the Precursor Door", false);
   AddOption(vars.trainingResolutions, "res_training_climb", 2, typeof(byte), 1, false, "Climb up the Cliff", false);
   AddOption(vars.trainingResolutions, "res_training_buzzer", 3, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  settings.Add("jak1_need_res_training", true, "Training", "jak1_need_res");
+  settings.Add("jak1_need_res_training", true, "Geyser Rock", "jak1_need_res");
   AddToSettings(vars.trainingResolutions, "jak1_need_res_training");
   vars.optionLists.Add(vars.trainingResolutions);
-
-  // Jungle
-  vars.jungleResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.jungleResolutions, "res_jungle_eggtop", 4, typeof(byte), 1, false, "Find the Blue Vent Switch", false);
-  AddOption(vars.jungleResolutions, "res_jungle_lurkerm", 5, typeof(byte), 1, false, "Connect the Eco Beams", false);
-  AddOption(vars.jungleResolutions, "res_jungle_tower", 6, typeof(byte), 1, false, "Get to the Top of the Temple", false);
-  AddOption(vars.jungleResolutions, "res_jungle_fishgame", 7, typeof(byte), 1, false, "Catch 200 Pounds of Fish", false);
-  AddOption(vars.jungleResolutions, "res_jungle_plant", 8, typeof(byte), 1, false, "Defeat the Dark Eco Plant", false);
-  AddOption(vars.jungleResolutions, "res_jungle_buzzer", 9, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  AddOption(vars.jungleResolutions, "res_jungle_canyon_end", 10, typeof(byte), 1, false, "Follow the canyon to the Sea", false);
-  AddOption(vars.jungleResolutions, "res_jungle_temple_door", 11, typeof(byte), 1, false, "Open the Locked Temple Door", false);
-  settings.Add("jak1_need_res_jungle", true, "Jungle", "jak1_need_res");
-  AddToSettings(vars.jungleResolutions, "jak1_need_res_jungle");
-  vars.optionLists.Add(vars.jungleResolutions);
-
+  
   // Village 1
   vars.village1Resolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.village1Resolutions, "res_village1_yakow", 12, typeof(byte), 1, false, "Herd the Yakows into their pen", false);
@@ -71,7 +57,7 @@ startup {
   AddOption(vars.village1Resolutions, "res_village1_oracle_money1", 15, typeof(byte), 1, false, "Bring 120 orbs to the Oracle", false);
   AddOption(vars.village1Resolutions, "res_village1_oracle_money2", 16, typeof(byte), 1, false, "Bring another 120 orbs to the Oracle", false);
   AddOption(vars.village1Resolutions, "res_village1_buzzer", 17, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  settings.Add("jak1_need_res_village1", true, "Village 1", "jak1_need_res");
+  settings.Add("jak1_need_res_village1", true, "Sandover Village", "jak1_need_res");
   AddToSettings(vars.village1Resolutions, "jak1_need_res_village1");
   vars.optionLists.Add(vars.village1Resolutions);
 
@@ -85,9 +71,23 @@ startup {
   AddOption(vars.beachResolutions, "res_beach_buzzer", 23, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   AddOption(vars.beachResolutions, "res_beach_gimmie", 24, typeof(byte), 1, false, "Explore the Beach", false);
   AddOption(vars.beachResolutions, "res_beach_sentinel", 25, typeof(byte), 1, false, "Climb the Sentinel", false);
-  settings.Add("jak1_need_res_beach", true, "Beach", "jak1_need_res");
+  settings.Add("jak1_need_res_beach", true, "Sentinel Beach", "jak1_need_res");
   AddToSettings(vars.beachResolutions, "jak1_need_res_beach");
   vars.optionLists.Add(vars.beachResolutions);
+
+  // Jungle
+  vars.jungleResolutions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.jungleResolutions, "res_jungle_eggtop", 4, typeof(byte), 1, false, "Find the Blue Vent Switch", false);
+  AddOption(vars.jungleResolutions, "res_jungle_lurkerm", 5, typeof(byte), 1, false, "Connect the Eco Beams", false);
+  AddOption(vars.jungleResolutions, "res_jungle_tower", 6, typeof(byte), 1, false, "Get to the Top of the Temple", false);
+  AddOption(vars.jungleResolutions, "res_jungle_fishgame", 7, typeof(byte), 1, false, "Catch 200 Pounds of Fish", false);
+  AddOption(vars.jungleResolutions, "res_jungle_plant", 8, typeof(byte), 1, false, "Defeat the Dark Eco Plant", false);
+  AddOption(vars.jungleResolutions, "res_jungle_buzzer", 9, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.jungleResolutions, "res_jungle_canyon_end", 10, typeof(byte), 1, false, "Follow the canyon to the Sea", false);
+  AddOption(vars.jungleResolutions, "res_jungle_temple_door", 11, typeof(byte), 1, false, "Open the Locked Temple Door", false);
+  settings.Add("jak1_need_res_jungle", true, "Forbidden Jungle", "jak1_need_res");
+  AddToSettings(vars.jungleResolutions, "jak1_need_res_jungle");
+  vars.optionLists.Add(vars.jungleResolutions);
 
   // Misty
   vars.mistyResolutions = new List<Dictionary<String, dynamic>>();
@@ -99,9 +99,17 @@ startup {
   AddOption(vars.mistyResolutions, "res_misty_buzzer", 31, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   AddOption(vars.mistyResolutions, "res_misty_bike_jump", 32, typeof(byte), 1, false, "Use Zoomer to Reach Power Cell", false);
   AddOption(vars.mistyResolutions, "res_misty_eco_challenge", 33, typeof(byte), 1, false, "Use Blue Eco to Reach Power Cell", false);
-  settings.Add("jak1_need_res_misty", true, "Misty", "jak1_need_res");
+  settings.Add("jak1_need_res_misty", true, "Misty Island", "jak1_need_res");
   AddToSettings(vars.mistyResolutions, "jak1_need_res_misty");
   vars.optionLists.Add(vars.mistyResolutions);
+
+  // Fire Canyon
+  vars.firecanyonResolutions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.firecanyonResolutions, "res_firecanyon_buzzer", 74, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.firecanyonResolutions, "res_firecanyon_end", 75, typeof(byte), 1, false, "Reach the End of Fire Canyon", false);
+  settings.Add("jak1_need_res_firecanyon", true, "Fire Canyon", "jak1_need_res");
+  AddToSettings(vars.firecanyonResolutions, "jak1_need_res_firecanyon");
+  vars.optionLists.Add(vars.firecanyonResolutions);
 
   // Village 2
   vars.village2Resolutions = new List<Dictionary<String, dynamic>>();
@@ -111,9 +119,23 @@ startup {
   AddOption(vars.village2Resolutions, "res_village2_oracle_money1", 37, typeof(byte), 1, false, "Bring 120 Orbs to the oracle", false);
   AddOption(vars.village2Resolutions, "res_village2_oracle_money2", 38, typeof(byte), 1, false, "Bring another 120 Orbs to the oracle", false);
   AddOption(vars.village2Resolutions, "res_village2_buzzer", 39, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  settings.Add("jak1_need_res_village2", true, "Village 2", "jak1_need_res");
+  settings.Add("jak1_need_res_village2", true, "Rock Village", "jak1_need_res");
   AddToSettings(vars.village2Resolutions, "jak1_need_res_village2");
   vars.optionLists.Add(vars.village2Resolutions);
+
+  // Sunken
+  vars.sunkenResolutions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.sunkenResolutions, "res_sunken_platforms", 49, typeof(byte), 1, false, "Match the Platform Colors", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_pipe", 50, typeof(byte), 1, false, "Follow the Colored Pipes", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_slide", 51, typeof(byte), 1, false, "Reach the Bottom of the City", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_room", 52, typeof(byte), 1, false, "Raise the Chamber", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_sharks", 53, typeof(byte), 1, false, "Quickly Cross the Dangerous Pool", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_buzzer", 54, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_top_of_helix", 55, typeof(byte), 1, false, "Climb the Slide Tube", false);
+  AddOption(vars.sunkenResolutions, "res_sunken_spinning_room", 56, typeof(byte), 1, false, "Reach the Center of the Complex", false);
+  settings.Add("jak1_need_res_sunken", true, "Lost Precursor City", "jak1_need_res");
+  AddToSettings(vars.sunkenResolutions, "jak1_need_res_sunken");
+  vars.optionLists.Add(vars.sunkenResolutions);
 
   // Swamp
   vars.swampResolutions = new List<Dictionary<String, dynamic>>();
@@ -127,23 +149,9 @@ startup {
   AddOption(vars.swampResolutions, "res_swamp_buzzer", 47, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   //While this is a "need res task" I think its more clear if we move it to a cutscenes category and rename this category "Power cells" Or something
   AddOption(vars.swampResolutions, "res_swamp_arm", 48, typeof(byte), 1, false, "swamp_arm", false);
-  settings.Add("jak1_need_res_swamp", true, "Swamp", "jak1_need_res");
+  settings.Add("jak1_need_res_swamp", true, "Boggy Swamp", "jak1_need_res");
   AddToSettings(vars.swampResolutions, "jak1_need_res_swamp");
   vars.optionLists.Add(vars.swampResolutions);
-
-  // Sunken
-  vars.sunkenResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.sunkenResolutions, "res_sunken_platforms", 49, typeof(byte), 1, false, "Match the Platform Colors", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_pipe", 50, typeof(byte), 1, false, "Follow the Colored Pipes", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_slide", 51, typeof(byte), 1, false, "Reach the Bottom of the City", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_room", 52, typeof(byte), 1, false, "Raise the Chamber", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_sharks", 53, typeof(byte), 1, false, "Quickly Cross the Dangerous Pool", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_buzzer", 54, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_top_of_helix", 55, typeof(byte), 1, false, "Climb the Slide Tube", false);
-  AddOption(vars.sunkenResolutions, "res_sunken_spinning_room", 56, typeof(byte), 1, false, "Reach the Center of the Complex", false);
-  settings.Add("jak1_need_res_sunken", true, "Sunken", "jak1_need_res");
-  AddToSettings(vars.sunkenResolutions, "jak1_need_res_sunken");
-  vars.optionLists.Add(vars.sunkenResolutions);
 
   // Rolling
   vars.rollingResolutions = new List<Dictionary<String, dynamic>>();
@@ -155,9 +163,33 @@ startup {
   AddOption(vars.rollingResolutions, "res_rolling_buzzer", 62, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   AddOption(vars.rollingResolutions, "res_rolling_ring_chase_1", 63, typeof(byte), 1, false, "Navigate the Purple Precursor Rings", false);
   AddOption(vars.rollingResolutions, "res_rolling_ring_chase_2", 64, typeof(byte), 1, false, "Navigate the Blue Precursor Rings", false);
-  settings.Add("jak1_need_res_rolling", true, "Rolling", "jak1_need_res");
+  settings.Add("jak1_need_res_rolling", true, "Precursor Basin", "jak1_need_res");
   AddToSettings(vars.rollingResolutions, "jak1_need_res_rolling");
   vars.optionLists.Add(vars.rollingResolutions);
+
+  // Ogre Boss
+  vars.ogrebossResolutons = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.ogrebossResolutons, "res_ogre_boss", 97, typeof(byte), 1, false, "Defeat Klaww", false);
+  AddOption(vars.ogrebossResolutons, "res_ogre_end", 98, typeof(byte), 1, false, "Reach the End of the Mountain Pass", false);
+  AddOption(vars.ogrebossResolutons, "res_ogre_buzzer", 99, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.ogrebossResolutons, "res_ogre_secret", 100, typeof(byte), 1, false, "Find the Hidden Power Cell", false);
+  settings.Add("jak1_need_res_ogreboss", true, "Mountain Pass", "jak1_need_res");
+  AddToSettings(vars.ogrebossResolutons, "jak1_need_res_ogreboss");
+  vars.optionLists.Add(vars.ogrebossResolutons);
+
+  // Village 3
+  vars.village3Resolutions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.village3Resolutions, "res_village3_extra1", 81, typeof(byte), 1, false, "Find the Hidden Power Cell", false);
+  AddOption(vars.village3Resolutions, "res_village3_buzzer", 82, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money1", 83, typeof(byte), 1, false, "Bring 90 Orbs to the Miners once", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money2", 84, typeof(byte), 1, false, "Bring 90 Orbs to the Miners twice", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money3", 85, typeof(byte), 1, false, "Bring 90 Orbs to the Miners three times", false);
+  AddOption(vars.village3Resolutions, "res_village3_miner_money4", 86, typeof(byte), 1, false, "Bring 90 Orbs to the Miners four times", false);
+  AddOption(vars.village3Resolutions, "res_village3_oracle_money1", 87, typeof(byte), 1, false, "Bring 120 Orbs to the Oracle", false);
+  AddOption(vars.village3Resolutions, "res_village3_oracle_money2", 88, typeof(byte), 1, false, "Bring another 120 Orbs to the Oracle", false);
+  settings.Add("jak1_need_res_village3", true, "Volcanic Crater", "jak1_need_res");
+  AddToSettings(vars.village3Resolutions, "jak1_need_res_village3");
+  vars.optionLists.Add(vars.village3Resolutions);
 
   // Snowy
   vars.snowyResolutions = new List<Dictionary<String, dynamic>>();
@@ -175,39 +207,6 @@ startup {
   AddToSettings(vars.snowyResolutions, "jak1_need_res_snowy");
   vars.optionLists.Add(vars.snowyResolutions);
 
-  // Fire Canyon
-  vars.firecanyonResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.firecanyonResolutions, "res_firecanyon_buzzer", 74, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  AddOption(vars.firecanyonResolutions, "res_firecanyon_end", 75, typeof(byte), 1, false, "Reach the End of Fire Canyon", false);
-  settings.Add("jak1_need_res_firecanyon", true, "Fire Canyon", "jak1_need_res");
-  AddToSettings(vars.firecanyonResolutions, "jak1_need_res_firecanyon");
-  vars.optionLists.Add(vars.firecanyonResolutions);
-
-  // Citadel
-  vars.citadelResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.citadelResolutions, "res_citadel_sage_green", 76, typeof(byte), 1, false, "Free the Green Sage", false);
-  AddOption(vars.citadelResolutions, "res_citadel_sage_blue", 77, typeof(byte), 1, false, "Free the Blue Sage", false);
-  AddOption(vars.citadelResolutions, "res_citadel_sage_red", 78, typeof(byte), 1, false, "Free the Red Sage", false);
-  AddOption(vars.citadelResolutions, "res_citadel_sage_yellow", 79, typeof(byte), 1, false, "Free the Yellow Sage", false);
-  AddOption(vars.citadelResolutions, "res_citadel_buzzer", 80, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  settings.Add("jak1_need_res_citadel", true, "Citadel", "jak1_need_res");
-  AddToSettings(vars.citadelResolutions, "jak1_need_res_citadel");
-  vars.optionLists.Add(vars.citadelResolutions);
-
-  // Village 3
-  vars.village3Resolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.village3Resolutions, "res_village3_extra1", 81, typeof(byte), 1, false, "Find the Hidden Power Cell", false);
-  AddOption(vars.village3Resolutions, "res_village3_buzzer", 82, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money1", 83, typeof(byte), 1, false, "Bring 90 Orbs to the Miners once", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money2", 84, typeof(byte), 1, false, "Bring 90 Orbs to the Miners twice", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money3", 85, typeof(byte), 1, false, "Bring 90 Orbs to the Miners three times", false);
-  AddOption(vars.village3Resolutions, "res_village3_miner_money4", 86, typeof(byte), 1, false, "Bring 90 Orbs to the Miners four times", false);
-  AddOption(vars.village3Resolutions, "res_village3_oracle_money1", 87, typeof(byte), 1, false, "Bring 120 Orbs to the Oracle", false);
-  AddOption(vars.village3Resolutions, "res_village3_oracle_money2", 88, typeof(byte), 1, false, "Bring another 120 Orbs to the Oracle", false);
-  settings.Add("jak1_need_res_village3", true, "Village 3", "jak1_need_res");
-  AddToSettings(vars.village3Resolutions, "jak1_need_res_village3");
-  vars.optionLists.Add(vars.village3Resolutions);
-
   // Spider Cave
   vars.spiderCaveResolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.spiderCaveResolutions, "res_cave_gnawers", 89, typeof(byte), 1, false, "Use your Goggles to shoot the Gnawing Lurkers", false);
@@ -222,16 +221,6 @@ startup {
   AddToSettings(vars.spiderCaveResolutions, "jak1_need_res_spidercave");
   vars.optionLists.Add(vars.spiderCaveResolutions);
 
-  // Ogre Boss
-  vars.ogrebossResolutons = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.ogrebossResolutons, "res_ogre_boss", 97, typeof(byte), 1, false, "Defeat Klaww", false);
-  AddOption(vars.ogrebossResolutons, "res_ogre_end", 98, typeof(byte), 1, false, "Reach the End of the Mountain Pass", false);
-  AddOption(vars.ogrebossResolutons, "res_ogre_buzzer", 99, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  AddOption(vars.ogrebossResolutons, "res_ogre_secret", 100, typeof(byte), 1, false, "Find the Hidden Power Cell", false);
-  settings.Add("jak1_need_res_ogreboss", true, "Ogre Boss", "jak1_need_res");
-  AddToSettings(vars.ogrebossResolutons, "jak1_need_res_ogreboss");
-  vars.optionLists.Add(vars.ogrebossResolutons);
-
   // Lava Tube
   vars.lavatubeResolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.lavatubeResolutions, "res_lavatube_end", 101, typeof(byte), 1, false, "Reach the end of the Lava Tube", false);
@@ -242,8 +231,18 @@ startup {
   AddToSettings(vars.lavatubeResolutions, "jak1_need_res_lavatube");
   vars.optionLists.Add(vars.lavatubeResolutions);
 
+  // Citadel
+  vars.citadelResolutions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.citadelResolutions, "res_citadel_sage_green", 76, typeof(byte), 1, false, "Free the Green Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_sage_blue", 77, typeof(byte), 1, false, "Free the Blue Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_sage_red", 78, typeof(byte), 1, false, "Free the Red Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_sage_yellow", 79, typeof(byte), 1, false, "Free the Yellow Sage", false);
+  AddOption(vars.citadelResolutions, "res_citadel_buzzer", 80, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  settings.Add("jak1_need_res_citadel", true, "Gol and Maia's Citadel", "jak1_need_res");
+  AddToSettings(vars.citadelResolutions, "jak1_need_res_citadel");
+  vars.optionLists.Add(vars.citadelResolutions);
+
   // NOTE - skipping `need_res_intro` because it's skipped when starting a run anyway
- 
 
   // Misc Tasks
   // - other tasks other than `need_resolution` ones, the ones deemed useful enough to be added
