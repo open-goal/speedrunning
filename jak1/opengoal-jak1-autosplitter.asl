@@ -85,6 +85,7 @@ startup {
   AddOption(vars.jungleResolutions, "res_jungle_buzzer", 9, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   AddOption(vars.jungleResolutions, "res_jungle_canyon_end", 10, typeof(byte), 1, false, "Follow the canyon to the Sea", false);
   AddOption(vars.jungleResolutions, "res_jungle_temple_door", 11, typeof(byte), 1, false, "Open the Locked Temple Door", false);
+  AddOption(vars.jungleResolutions, "int_jungle_fishgame", 107, typeof(byte), 1, false, "Talk to Fisherman", false);
   settings.Add("jak1_need_res_jungle", true, "Forbidden Jungle", "jak1_need_res");
   AddToSettings(vars.jungleResolutions, "jak1_need_res_jungle");
   vars.optionLists.Add(vars.jungleResolutions);
@@ -148,7 +149,7 @@ startup {
   AddOption(vars.swampResolutions, "res_swamp_tether_4", 46, typeof(byte), 1, false, "Break the fourth tether to the Zeppelin", false);
   AddOption(vars.swampResolutions, "res_swamp_buzzer", 47, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   //While this is a "need res task" I think its more clear if we move it to a cutscenes category and rename this category "Power cells" Or something
-  AddOption(vars.swampResolutions, "res_swamp_arm", 48, typeof(byte), 1, false, "swamp_arm", false);
+  //AddOption(vars.swampResolutions, "res_swamp_arm", 48, typeof(byte), 1, false, "swamp_arm", false);
   settings.Add("jak1_need_res_swamp", true, "Boggy Swamp", "jak1_need_res");
   AddToSettings(vars.swampResolutions, "jak1_need_res_swamp");
   vars.optionLists.Add(vars.swampResolutions);
@@ -202,7 +203,7 @@ startup {
   AddOption(vars.snowyResolutions, "res_snow_bumpers", 71, typeof(byte), 1, false, "Deactivate the Precursor Blockers", false);
   AddOption(vars.snowyResolutions, "res_snow_cage", 72, typeof(byte), 1, false, "Opent the Frozen Crate", false);
   //The task below is unsed in retail versions of the game.
-  AddOption(vars.snowyResolutions, "res_red_eggtop", 73, typeof(byte), 1, false, "red_eggtop", false);
+  //AddOption(vars.snowyResolutions, "res_red_eggtop", 73, typeof(byte), 1, false, "red_eggtop", false);
   settings.Add("jak1_need_res_snowy", true, "Snowy Mountain", "jak1_need_res");
   AddToSettings(vars.snowyResolutions, "jak1_need_res_snowy");
   vars.optionLists.Add(vars.snowyResolutions);
@@ -226,7 +227,7 @@ startup {
   AddOption(vars.lavatubeResolutions, "res_lavatube_end", 101, typeof(byte), 1, false, "Reach the end of the Lava Tube", false);
   AddOption(vars.lavatubeResolutions, "res_lavatube_buzzer", 102, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   //This task below does not go with a in game Power Cell
-  AddOption(vars.lavatubeResolutions, "res_lavatube_balls", 103, typeof(byte), 1, false, "lavatube_balls", false);
+  AddOption(vars.lavatubeResolutions, "res_lavatube_balls", 103, typeof(byte), 1, false, "Finish Oranges", false);
   settings.Add("jak1_need_res_lavatube", true, "Lava Tube", "jak1_need_res");
   AddToSettings(vars.lavatubeResolutions, "jak1_need_res_lavatube");
   vars.optionLists.Add(vars.lavatubeResolutions);
@@ -238,6 +239,7 @@ startup {
   AddOption(vars.citadelResolutions, "res_citadel_sage_red", 78, typeof(byte), 1, false, "Free the Red Sage", false);
   AddOption(vars.citadelResolutions, "res_citadel_sage_yellow", 79, typeof(byte), 1, false, "Free the Yellow Sage", false);
   AddOption(vars.citadelResolutions, "res_citadel_buzzer", 80, typeof(byte), 1, false, "Free 7 Scout Flies", false);
+  AddOption(vars.citadelResolutions, "unk_finalboss_movies", 106, typeof(byte), 1, false, "Light Eco?!?! That could be the stuff to change me back!", false);
   settings.Add("jak1_need_res_citadel", true, "Gol and Maia's Citadel", "jak1_need_res");
   AddToSettings(vars.citadelResolutions, "jak1_need_res_citadel");
   vars.optionLists.Add(vars.citadelResolutions);
@@ -246,11 +248,9 @@ startup {
 
   // Misc Tasks
   // - other tasks other than `need_resolution` ones, the ones deemed useful enough to be added
-  settings.Add("jak1_misc_tasks", true, "Miscellaneous Tasks");
+  settings.Add("jak1_misc_tasks", true, "Final Task");
   vars.miscallenousTasks = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.miscallenousTasks, "int_finalboss_movies", 105, typeof(byte), 1, true, "int_finalboss_movies", false);
-  AddOption(vars.miscallenousTasks, "unk_finalboss_movies", 106, typeof(byte), 1, false, "Light Eco?!?! That could be the stuff to change me back!", false);
-  AddOption(vars.miscallenousTasks, "int_jungle_fishgame", 107, typeof(byte), 1, false, "Talk to Fisherman", false);
+  AddOption(vars.miscallenousTasks, "int_finalboss_movies", 105, typeof(byte), 1, true, "Collect Light Eco", false);
   AddToSettings(vars.miscallenousTasks, "jak1_misc_tasks");
   vars.optionLists.Add(vars.miscallenousTasks);
 
