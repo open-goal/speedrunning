@@ -41,6 +41,7 @@ startup {
 
   // Training
   vars.trainingResolutions = new List<Dictionary<String, dynamic>>();
+
   AddOption(vars.trainingResolutions, "res_training_gimmie", 0, typeof(byte), 1, false, "Find the Cell on the Path", false);
   AddOption(vars.trainingResolutions, "res_training_door", 1, typeof(byte), 1, false, "Open the Precursor Door", false);
   AddOption(vars.trainingResolutions, "res_training_climb", 2, typeof(byte), 1, false, "Climb up the Cliff", false);
@@ -63,6 +64,7 @@ startup {
 
   // Beach
   vars.beachResolutions = new List<Dictionary<String, dynamic>>();
+
   AddOption(vars.beachResolutions, "res_beach_ecorocks", 18, typeof(byte), 1, false, "Unblock the eco harvesters", false);
   AddOption(vars.beachResolutions, "res_beach_pelican", 19, typeof(byte), 1, false, "Get the power cell from the pelican", false);
   AddOption(vars.beachResolutions, "res_beach_flutflut", 20, typeof(byte), 1, false, "Push the Flut Flut egg off the cliff", false);
@@ -92,6 +94,7 @@ startup {
 
   // Misty
   vars.mistyResolutions = new List<Dictionary<String, dynamic>>();
+
   AddOption(vars.mistyResolutions, "res_misty_muse", 26, typeof(byte), 1, false, "Catch the Sculptors Muse", false);
   AddOption(vars.mistyResolutions, "res_misty_boat", 27, typeof(byte), 1, false, "Climb the Lurker Ship", false);
   AddOption(vars.mistyResolutions, "res_misty_warehouse", 28, typeof(byte), 1, false, "Return to the Dark Eco Pool", false);
@@ -221,6 +224,7 @@ startup {
   settings.Add("jak1_need_res_spidercave", true, "Spider Cave", "jak1_need_res");
   AddToSettings(vars.spiderCaveResolutions, "jak1_need_res_spidercave");
   vars.optionLists.Add(vars.spiderCaveResolutions);
+
 
   // Lava Tube
   vars.lavatubeResolutions = new List<Dictionary<String, dynamic>>();
