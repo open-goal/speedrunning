@@ -146,10 +146,10 @@ startup {
   AddOption(vars.swampResolutions, "res_swamp_billy", 40, typeof(byte), 1, false, "Protect Farthy's Snacks", false);
   AddOption(vars.swampResolutions, "res_swamp_flutflut", 41, typeof(byte), 1, false, "Ride the Flut Flut", false);
   AddOption(vars.swampResolutions, "res_swamp_battle", 42, typeof(byte), 1, false, "Defeat the Lurker Ambush", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_1", 43, typeof(byte), 1, false, "Break the first tether to the Zeppelin", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_2", 44, typeof(byte), 1, false, "Break the second tether to the Zeppelin", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_3", 45, typeof(byte), 1, false, "Break the third tether to the Zeppelin", false);
-  AddOption(vars.swampResolutions, "res_swamp_tether_4", 46, typeof(byte), 1, false, "Break the fourth tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_4", 46, typeof(byte), 1, false, "Break the first tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_1", 43, typeof(byte), 1, false, "Break the second tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_2", 44, typeof(byte), 1, false, "Break the third tether to the Zeppelin", false);
+  AddOption(vars.swampResolutions, "res_swamp_tether_3", 45, typeof(byte), 1, false, "Break the last tether to the Zeppelin", false);
   AddOption(vars.swampResolutions, "res_swamp_buzzer", 47, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   //While this is a "need res task" I think its more clear if we move it to a cutscenes category and rename this category "Power cells" Or something
   //AddOption(vars.swampResolutions, "res_swamp_arm", 48, typeof(byte), 1, false, "swamp_arm", false);
