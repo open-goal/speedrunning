@@ -1,0 +1,465 @@
+{
+  "structFields": [
+    {
+      "label": "versionMajor",
+      "type": "uint16",
+      "hidden": true
+    },
+    {
+      "label": "versionMinor",
+      "type": "uint16",
+      "hidden": true
+    },
+    {
+      "label": "numOrbs",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "numSkullgems",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "padding",
+      "type": "uint8[200]",
+      "hidden": true
+    },
+    {
+      "label": "gameHash",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "inCutscene",
+      "type": "bool",
+      "hidden": true
+    },
+    {
+      "label": "isLoading",
+      "type": "bool",
+      "hidden": true
+    },
+    {
+      "label": "padding",
+      "type": "uint8[200]",
+      "hidden": true
+    },
+    {
+      "label": "res-fortress-escape",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-help-kid",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-vehicle-training",
+      "type": "bool"
+    },
+    {
+      "label": "res-ruins-tower",
+      "type": "bool"
+    },
+    {
+      "label": "res-atoll-water",
+      "type": "bool"
+    },
+    {
+      "label": "res-fortress-dump",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-krew-delivery",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-red-gun-training",
+      "type": "bool"
+    },
+    {
+      "label": "res-atoll-sig",
+      "type": "bool"
+    },
+    {
+      "label": "res-sewer-enemy",
+      "type": "bool"
+    },
+    {
+      "label": "res-strip-rescue",
+      "type": "bool"
+    },
+    {
+      "label": "res-atoll-battle",
+      "type": "bool"
+    },
+    {
+      "label": "res-mountain-lens",
+      "type": "bool"
+    },
+    {
+      "label": "res-mountain-gear",
+      "type": "bool"
+    },
+    {
+      "label": "res-mountain-shard",
+      "type": "bool"
+    },
+    {
+      "label": "res-mountain-collection",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-keira-delivery",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-board1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-krew-collection",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-yellow-gun-training",
+      "type": "bool"
+    },
+    {
+      "label": "res-drill-eggs",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-power",
+      "type": "bool"
+    },
+    {
+      "label": "res-palace-cable",
+      "type": "bool"
+    },
+    {
+      "label": "res-palace-boss",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-shuttle",
+      "type": "bool"
+    },
+    {
+      "label": "res-ruins-enemy",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-blue-gun-training",
+      "type": "bool"
+    },
+    {
+      "label": "res-forest-scouts",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-escort-kid",
+      "type": "bool"
+    },
+    {
+      "label": "res-dig-knock-down",
+      "type": "bool"
+    },
+    {
+      "label": "res-strip-grenade",
+      "type": "bool"
+    },
+    {
+      "label": "res-drill-ship",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-port-run",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-meet-brutter",
+      "type": "bool"
+    },
+    {
+      "label": "res-sewer-board",
+      "type": "bool"
+    },
+    {
+      "label": "res-forest-hunt",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-intercept-tanker",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-race-class3",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-protect-water-slums",
+      "type": "bool"
+    },
+    {
+      "label": "res-dig-find-totem",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-destroy-guard-vehicles",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-play-onin-game",
+      "type": "bool"
+    },
+    {
+      "label": "res-canyon-insert-items",
+      "type": "bool"
+    },
+    {
+      "label": "res-tomb-poles",
+      "type": "bool"
+    },
+    {
+      "label": "res-tomb-water",
+      "type": "bool"
+    },
+    {
+      "label": "res-tomb-boss",
+      "type": "bool"
+    },
+    {
+      "label": "res-fortress-save-friends",
+      "type": "bool"
+    },
+    {
+      "label": "res-sewer-escort",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-dark-gun-training",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-race-class2",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-stop-bomb-bots",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-errol-challenge",
+      "type": "bool"
+    },
+    {
+      "label": "res-strip-drop",
+      "type": "bool"
+    },
+    {
+      "label": "res-ruins-mech",
+      "type": "bool"
+    },
+    {
+      "label": "res-forest-protect",
+      "type": "bool"
+    },
+    {
+      "label": "res-drill-mech",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-save-lurkers",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-race-class",
+      "type": "bool"
+    },
+    {
+      "label": "res-palace-sneak-in",
+      "type": "bool"
+    },
+    {
+      "label": "res-castle-break-in",
+      "type": "bool"
+    },
+    {
+      "label": "res-castle-boss",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-whack",
+      "type": "bool"
+    },
+    {
+      "label": "res-under-mech",
+      "type": "bool"
+    },
+    {
+      "label": "res-under-sig",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-defend-stadium",
+      "type": "bool"
+    },
+    {
+      "label": "res-consite-find-baron",
+      "type": "bool"
+    },
+    {
+      "label": "res-nest-get-to-gun",
+      "type": "bool"
+    },
+    {
+      "label": "res-nest-enter",
+      "type": "bool"
+    },
+    {
+      "label": "res-nest-boss",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-win",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-oracle",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-ring-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-3",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-4",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-collection-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-racepoint-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-ring-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-5",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-6",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-shuttle-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-7",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-8",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-9",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-collection-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-10",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-11",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-ring-3",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-12",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-bombbot-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-13",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-14",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-get-to-15",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-collection-3",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-race-errol",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-burning-bush-race-port",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-burning-bush-race-board",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-burning-bush-race-class3",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-burning-bush-race-class2",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-burning-bush-race-class1",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-burning-bush-race-class3-r",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-burning-bush-race-class2-r",
+      "type": "bool"
+    },
+    {
+      "label": "res-stadium-burning-bush-race-class1-r",
+      "type": "bool"
+    }
+  ]
+}
