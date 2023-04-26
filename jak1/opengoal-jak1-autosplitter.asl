@@ -176,7 +176,7 @@ startup {
   settings.Add("jak1_need_res_training", true, "Geyser Rock", "jak1_need_res");
   AddToSettings(vars.trainingResolutions, "jak1_need_res_training");
   vars.optionLists.Add(vars.trainingResolutions);
-  
+
   // Village 1
   vars.village1Resolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.village1Resolutions, "res_village1_yakow", jak1_need_res_offset + 12, typeof(byte), 1, false, "Herd the Yakows into their pen", false);
