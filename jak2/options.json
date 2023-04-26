@@ -461,5 +461,42 @@
       "label": "res-stadium-burning-bush-race-class1-r",
       "type": "bool"
     }
+  ],
+  "presets": [
+    {
+      "name": "Any%",
+      "varName": "anyPercent",
+      "options": [
+        "res-fortress-escape",
+        "res-city-help-kid",
+        "res-tomb-poles",
+        "res-tomb-water",
+        "res-tomb-boss",
+        "res-fortress-save-friends",
+        "res-sewer-escort",
+        "res-city-stop-bomb-bots",
+        "res-stadium-race-class2",
+        "res-city-dark-gun-training",
+        "res-city-errol-challenge",
+        "res-ruins-mech",
+        "res-forest-protect",
+        "res-strip-drop",
+        "res-drill-mech",
+        "res-city-save-lurkers",
+        "res-stadium-race-class",
+        "res-palace-sneak-in",
+        "res-castle-break-in",
+        "res-castle-boss",
+        "res-city-whack",
+        "res-under-mech",
+        "res-under-sig",
+        "res-city-defend-stadium",
+        "res-consite-find-baron",
+        "res-nest-get-to-gun",
+        "res-nest-enter",
+        "res-nest-boss",
+        "res-city-win"
+      ]
+    }
   ]
 }
