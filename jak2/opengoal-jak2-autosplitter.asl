@@ -66,10 +66,178 @@ startup {
   AddOption(vars.anyPercent, "anyPercent_res-nest-get-to-gun", 484, typeof(byte), 1, false, "res-nest-get-to-gun", false);
   AddOption(vars.anyPercent, "anyPercent_res-nest-enter", 485, typeof(byte), 1, false, "res-nest-enter", false);
   AddOption(vars.anyPercent, "anyPercent_res-nest-boss", 486, typeof(byte), 1, false, "res-nest-boss", false);
-  AddOption(vars.anyPercent, "anyPercent_res-city-win", 487, typeof(byte), 1, false, "res-city-win", false);
   settings.Add("preset_anyPercent", false, "Any%");
   AddToSettings(vars.anyPercent, "preset_anyPercent");
   vars.optionLists.Add(vars.anyPercent);
+  vars.allMissions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.allMissions, "allMissions_res-fortress-escape", 418, typeof(byte), 1, false, "res-fortress-escape", false);
+  AddOption(vars.allMissions, "allMissions_res-city-help-kid", 419, typeof(byte), 1, false, "res-city-help-kid", false);
+  AddOption(vars.allMissions, "allMissions_res-ruins-tower", 421, typeof(byte), 1, false, "res-ruins-tower", false);
+  AddOption(vars.allMissions, "allMissions_res-atoll-water", 422, typeof(byte), 1, false, "res-atoll-water", false);
+  AddOption(vars.allMissions, "allMissions_res-fortress-dump", 423, typeof(byte), 1, false, "res-fortress-dump", false);
+  AddOption(vars.allMissions, "allMissions_res-city-krew-delivery", 424, typeof(byte), 1, false, "res-city-krew-delivery", false);
+  AddOption(vars.allMissions, "allMissions_res-city-red-gun-training", 425, typeof(byte), 1, false, "res-city-red-gun-training", false);
+  AddOption(vars.allMissions, "allMissions_res-atoll-sig", 426, typeof(byte), 1, false, "res-atoll-sig", false);
+  AddOption(vars.allMissions, "allMissions_res-sewer-enemy", 427, typeof(byte), 1, false, "res-sewer-enemy", false);
+  AddOption(vars.allMissions, "allMissions_res-city-yellow-gun-training", 437, typeof(byte), 1, false, "res-city-yellow-gun-training", false);
+  AddOption(vars.allMissions, "allMissions_res-city-keira-delivery", 434, typeof(byte), 1, false, "res-city-keira-delivery", false);
+  AddOption(vars.allMissions, "allMissions_res-strip-rescue", 428, typeof(byte), 1, false, "res-strip-rescue", false);
+  AddOption(vars.allMissions, "allMissions_res-drill-eggs", 438, typeof(byte), 1, false, "res-drill-eggs", false);
+  AddOption(vars.allMissions, "allMissions_res-atoll-battle", 429, typeof(byte), 1, false, "res-atoll-battle", false);
+  AddOption(vars.allMissions, "allMissions_res-mountain-lens", 430, typeof(byte), 1, false, "res-mountain-lens", false);
+  AddOption(vars.allMissions, "allMissions_res-mountain-gear", 431, typeof(byte), 1, false, "res-mountain-gear", false);
+  AddOption(vars.allMissions, "allMissions_res-mountain-shard", 432, typeof(byte), 1, false, "res-mountain-shard", false);
+  AddOption(vars.allMissions, "allMissions_res-stadium-board1", 435, typeof(byte), 1, false, "res-stadium-board1", false);
+  AddOption(vars.allMissions, "allMissions_res-city-power", 439, typeof(byte), 1, false, "res-city-power", false);
+  AddOption(vars.allMissions, "allMissions_res-palace-cable", 440, typeof(byte), 1, false, "res-palace-cable", false);
+  AddOption(vars.allMissions, "allMissions_res-palace-boss", 441, typeof(byte), 1, false, "res-palace-boss", false);
+  AddOption(vars.allMissions, "allMissions_res-city-krew-collection", 436, typeof(byte), 1, false, "res-city-krew-collection", false);
+  AddOption(vars.allMissions, "allMissions_res-city-shuttle", 442, typeof(byte), 1, false, "res-city-shuttle", false);
+  AddOption(vars.allMissions, "allMissions_res-ruins-enemy", 443, typeof(byte), 1, false, "res-ruins-enemy", false);
+  AddOption(vars.allMissions, "allMissions_res-forest-scouts", 445, typeof(byte), 1, false, "res-forest-scouts", false);
+  AddOption(vars.allMissions, "allMissions_res-city-port-run", 450, typeof(byte), 1, false, "res-city-port-run", false);
+  AddOption(vars.allMissions, "allMissions_res-city-meet-brutter", 451, typeof(byte), 1, false, "res-city-meet-brutter", false);
+  AddOption(vars.allMissions, "allMissions_res-city-intercept-tanker", 454, typeof(byte), 1, false, "res-city-intercept-tanker", false);
+  AddOption(vars.allMissions, "allMissions_res-sewer-board", 452, typeof(byte), 1, false, "res-sewer-board", false);
+  AddOption(vars.allMissions, "allMissions_res-city-escort-kid", 446, typeof(byte), 1, false, "res-city-escort-kid", false);
+  AddOption(vars.allMissions, "allMissions_res-dig-knock-down", 447, typeof(byte), 1, false, "res-dig-knock-down", false);
+  AddOption(vars.allMissions, "allMissions_res-strip-grenade", 448, typeof(byte), 1, false, "res-strip-grenade", false);
+  AddOption(vars.allMissions, "allMissions_res-drill-ship", 449, typeof(byte), 1, false, "res-drill-ship", false);
+  AddOption(vars.allMissions, "allMissions_res-dig-find-totem", 457, typeof(byte), 1, false, "res-dig-find-totem", false);
+  AddOption(vars.allMissions, "allMissions_res-city-destroy-guard-vehicles", 458, typeof(byte), 1, false, "res-city-destroy-guard-vehicles", false);
+  AddOption(vars.allMissions, "allMissions_res-city-protect-water-slums", 456, typeof(byte), 1, false, "res-city-protect-water-slums", false);
+  AddOption(vars.allMissions, "allMissions_res-stadium-race-class3", 455, typeof(byte), 1, false, "res-stadium-race-class3", false);
+  AddOption(vars.allMissions, "allMissions_res-forest-hunt", 453, typeof(byte), 1, false, "res-forest-hunt", false);
+  AddOption(vars.allMissions, "allMissions_res-city-play-onin-game", 459, typeof(byte), 1, false, "res-city-play-onin-game", false);
+  AddOption(vars.allMissions, "allMissions_res-canyon-insert-items", 460, typeof(byte), 1, false, "res-canyon-insert-items", false);
+  AddOption(vars.allMissions, "allMissions_res-tomb-poles", 461, typeof(byte), 1, false, "res-tomb-poles", false);
+  AddOption(vars.allMissions, "allMissions_res-tomb-water", 462, typeof(byte), 1, false, "res-tomb-water", false);
+  AddOption(vars.allMissions, "allMissions_res-tomb-boss", 463, typeof(byte), 1, false, "res-tomb-boss", false);
+  AddOption(vars.allMissions, "allMissions_res-fortress-save-friends", 464, typeof(byte), 1, false, "res-fortress-save-friends", false);
+  AddOption(vars.allMissions, "allMissions_res-sewer-escort", 465, typeof(byte), 1, false, "res-sewer-escort", false);
+  AddOption(vars.allMissions, "allMissions_res-city-stop-bomb-bots", 468, typeof(byte), 1, false, "res-city-stop-bomb-bots", false);
+  AddOption(vars.allMissions, "allMissions_res-stadium-race-class2", 467, typeof(byte), 1, false, "res-stadium-race-class2", false);
+  AddOption(vars.allMissions, "allMissions_res-city-errol-challenge", 469, typeof(byte), 1, false, "res-city-errol-challenge", false);
+  AddOption(vars.allMissions, "allMissions_res-ruins-mech", 471, typeof(byte), 1, false, "res-ruins-mech", false);
+  AddOption(vars.allMissions, "allMissions_res-forest-protect", 472, typeof(byte), 1, false, "res-forest-protect", false);
+  AddOption(vars.allMissions, "allMissions_res-strip-drop", 470, typeof(byte), 1, false, "res-strip-drop", false);
+  AddOption(vars.allMissions, "allMissions_res-drill-mech", 473, typeof(byte), 1, false, "res-drill-mech", false);
+  AddOption(vars.allMissions, "allMissions_res-city-save-lurkers", 474, typeof(byte), 1, false, "res-city-save-lurkers", false);
+  AddOption(vars.allMissions, "allMissions_res-stadium-race-class", 475, typeof(byte), 1, false, "res-stadium-race-class", false);
+  AddOption(vars.allMissions, "allMissions_res-palace-sneak-in", 476, typeof(byte), 1, false, "res-palace-sneak-in", false);
+  AddOption(vars.allMissions, "allMissions_res-castle-break-in", 477, typeof(byte), 1, false, "res-castle-break-in", false);
+  AddOption(vars.allMissions, "allMissions_res-castle-boss", 478, typeof(byte), 1, false, "res-castle-boss", false);
+  AddOption(vars.allMissions, "allMissions_res-city-whack", 479, typeof(byte), 1, false, "res-city-whack", false);
+  AddOption(vars.allMissions, "allMissions_res-under-mech", 480, typeof(byte), 1, false, "res-under-mech", false);
+  AddOption(vars.allMissions, "allMissions_res-under-sig", 481, typeof(byte), 1, false, "res-under-sig", false);
+  AddOption(vars.allMissions, "allMissions_res-city-defend-stadium", 482, typeof(byte), 1, false, "res-city-defend-stadium", false);
+  AddOption(vars.allMissions, "allMissions_res-consite-find-baron", 483, typeof(byte), 1, false, "res-consite-find-baron", false);
+  AddOption(vars.allMissions, "allMissions_res-nest-get-to-gun", 484, typeof(byte), 1, false, "res-nest-get-to-gun", false);
+  AddOption(vars.allMissions, "allMissions_res-nest-enter", 485, typeof(byte), 1, false, "res-nest-enter", false);
+  AddOption(vars.allMissions, "allMissions_res-nest-boss", 486, typeof(byte), 1, false, "res-nest-boss", false);
+  settings.Add("preset_allMissions", false, "All Missions");
+  AddToSettings(vars.allMissions, "preset_allMissions");
+  vars.optionLists.Add(vars.allMissions);
+  vars.hundredPercent = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.hundredPercent, "hundredPercent_res-fortress-escape", 418, typeof(byte), 1, false, "res-fortress-escape", true);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-help-kid", 419, typeof(byte), 1, false, "res-city-help-kid", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-ruins-tower", 421, typeof(byte), 1, false, "res-ruins-tower", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-atoll-water", 422, typeof(byte), 1, false, "res-atoll-water", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-fortress-dump", 423, typeof(byte), 1, false, "res-fortress-dump", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-krew-delivery", 424, typeof(byte), 1, false, "res-city-krew-delivery", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-red-gun-training", 425, typeof(byte), 1, false, "res-city-red-gun-training", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-ring-1", 489, typeof(byte), 1, false, "res-city-burning-bush-ring-1", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-atoll-sig", 426, typeof(byte), 1, false, "res-atoll-sig", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-2", 491, typeof(byte), 1, false, "res-city-burning-bush-get-to-2", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-sewer-enemy", 427, typeof(byte), 1, false, "res-sewer-enemy", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-yellow-gun-training", 437, typeof(byte), 1, false, "res-city-yellow-gun-training", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-keira-delivery", 434, typeof(byte), 1, false, "res-city-keira-delivery", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-strip-rescue", 428, typeof(byte), 1, false, "res-strip-rescue", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-drill-eggs", 438, typeof(byte), 1, false, "res-drill-eggs", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-1", 490, typeof(byte), 1, false, "res-city-burning-bush-get-to-1", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-atoll-battle", 429, typeof(byte), 1, false, "res-atoll-battle", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-4", 493, typeof(byte), 1, false, "res-city-burning-bush-get-to-4", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-mountain-lens", 430, typeof(byte), 1, false, "res-mountain-lens", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-mountain-gear", 431, typeof(byte), 1, false, "res-mountain-gear", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-mountain-shard", 432, typeof(byte), 1, false, "res-mountain-shard", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-racepoint-1", 495, typeof(byte), 1, false, "res-city-burning-bush-racepoint-1", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-board1", 435, typeof(byte), 1, false, "res-stadium-board1", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-power", 439, typeof(byte), 1, false, "res-city-power", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-palace-cable", 440, typeof(byte), 1, false, "res-palace-cable", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-palace-boss", 441, typeof(byte), 1, false, "res-palace-boss", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-krew-collection", 436, typeof(byte), 1, false, "res-city-krew-collection", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-shuttle", 442, typeof(byte), 1, false, "res-city-shuttle", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-ruins-enemy", 443, typeof(byte), 1, false, "res-ruins-enemy", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-forest-scouts", 445, typeof(byte), 1, false, "res-forest-scouts", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-port-run", 450, typeof(byte), 1, false, "res-city-port-run", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-meet-brutter", 451, typeof(byte), 1, false, "res-city-meet-brutter", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-intercept-tanker", 454, typeof(byte), 1, false, "res-city-intercept-tanker", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-sewer-board", 452, typeof(byte), 1, false, "res-sewer-board", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-escort-kid", 446, typeof(byte), 1, false, "res-city-escort-kid", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-dig-knock-down", 447, typeof(byte), 1, false, "res-dig-knock-down", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-strip-grenade", 448, typeof(byte), 1, false, "res-strip-grenade", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-drill-ship", 449, typeof(byte), 1, false, "res-drill-ship", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-dig-find-totem", 457, typeof(byte), 1, false, "res-dig-find-totem", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-3", 492, typeof(byte), 1, false, "res-city-burning-bush-get-to-3", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-ring-2", 496, typeof(byte), 1, false, "res-city-burning-bush-ring-2", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-destroy-guard-vehicles", 458, typeof(byte), 1, false, "res-city-destroy-guard-vehicles", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-protect-water-slums", 456, typeof(byte), 1, false, "res-city-protect-water-slums", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-collection-1", 494, typeof(byte), 1, false, "res-city-burning-bush-collection-1", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-race-class3", 455, typeof(byte), 1, false, "res-stadium-race-class3", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-forest-hunt", 453, typeof(byte), 1, false, "res-forest-hunt", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-play-onin-game", 459, typeof(byte), 1, false, "res-city-play-onin-game", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-8", 501, typeof(byte), 1, false, "res-city-burning-bush-get-to-8", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-canyon-insert-items", 460, typeof(byte), 1, false, "res-canyon-insert-items", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-tomb-poles", 461, typeof(byte), 1, false, "res-tomb-poles", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-tomb-water", 462, typeof(byte), 1, false, "res-tomb-water", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-tomb-boss", 463, typeof(byte), 1, false, "res-tomb-boss", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-shuttle-1", 499, typeof(byte), 1, false, "res-city-burning-bush-shuttle-1", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-fortress-save-friends", 464, typeof(byte), 1, false, "res-fortress-save-friends", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-sewer-escort", 465, typeof(byte), 1, false, "res-sewer-escort", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-stop-bomb-bots", 468, typeof(byte), 1, false, "res-city-stop-bomb-bots", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-9", 502, typeof(byte), 1, false, "res-city-burning-bush-get-to-9", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-race-class2", 467, typeof(byte), 1, false, "res-stadium-race-class2", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-collection-2", 503, typeof(byte), 1, false, "res-city-burning-bush-collection-2", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-errol-challenge", 469, typeof(byte), 1, false, "res-city-errol-challenge", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-ruins-mech", 471, typeof(byte), 1, false, "res-ruins-mech", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-ring-3", 506, typeof(byte), 1, false, "res-city-burning-bush-ring-3", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-10", 504, typeof(byte), 1, false, "res-city-burning-bush-get-to-10", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-7", 500, typeof(byte), 1, false, "res-city-burning-bush-get-to-7", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-6", 498, typeof(byte), 1, false, "res-city-burning-bush-get-to-6", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-forest-protect", 472, typeof(byte), 1, false, "res-forest-protect", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-strip-drop", 470, typeof(byte), 1, false, "res-strip-drop", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-drill-mech", 473, typeof(byte), 1, false, "res-drill-mech", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-save-lurkers", 474, typeof(byte), 1, false, "res-city-save-lurkers", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-race-class", 475, typeof(byte), 1, false, "res-stadium-race-class", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-palace-sneak-in", 476, typeof(byte), 1, false, "res-palace-sneak-in", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-castle-break-in", 477, typeof(byte), 1, false, "res-castle-break-in", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-castle-boss", 478, typeof(byte), 1, false, "res-castle-boss", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-whack", 479, typeof(byte), 1, false, "res-city-whack", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-under-mech", 480, typeof(byte), 1, false, "res-under-mech", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-under-sig", 481, typeof(byte), 1, false, "res-under-sig", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-defend-stadium", 482, typeof(byte), 1, false, "res-city-defend-stadium", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-consite-find-baron", 483, typeof(byte), 1, false, "res-consite-find-baron", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-nest-get-to-gun", 484, typeof(byte), 1, false, "res-nest-get-to-gun", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-nest-enter", 485, typeof(byte), 1, false, "res-nest-enter", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-nest-boss", 486, typeof(byte), 1, false, "res-nest-boss", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-race-port", 514, typeof(byte), 1, false, "res-city-burning-bush-race-port", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-blue-gun-training", 444, typeof(byte), 1, false, "res-city-blue-gun-training", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-dark-gun-training", 466, typeof(byte), 1, false, "res-city-dark-gun-training", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-5", 497, typeof(byte), 1, false, "res-city-burning-bush-get-to-5", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-12", 507, typeof(byte), 1, false, "res-city-burning-bush-get-to-12", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-bombbot-1", 508, typeof(byte), 1, false, "res-city-burning-bush-bombbot-1", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-15", 511, typeof(byte), 1, false, "res-city-burning-bush-get-to-15", false);
+  AddOption(vars.hundredPercent, "hundredPercent_numSkullgems", 8, typeof(uint), 500, false, "500 Skull Gems", true);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-collection-3", 512, typeof(byte), 1, false, "res-city-burning-bush-collection-3", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-14", 510, typeof(byte), 1, false, "res-city-burning-bush-get-to-14", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-11", 505, typeof(byte), 1, false, "res-city-burning-bush-get-to-11", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-13", 509, typeof(byte), 1, false, "res-city-burning-bush-get-to-13", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-burning-bush-race-class1-r", 521, typeof(byte), 1, false, "res-stadium-burning-bush-race-class1-r", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-burning-bush-race-class2-r", 520, typeof(byte), 1, false, "res-stadium-burning-bush-race-class2-r", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-burning-bush-race-class3-r", 519, typeof(byte), 1, false, "res-stadium-burning-bush-race-class3-r", false);
+  settings.Add("preset_hundredPercent", false, "100%");
+  AddToSettings(vars.hundredPercent, "preset_hundredPercent");
+  vars.optionLists.Add(vars.hundredPercent);
   vars.manualOptions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.manualOptions, "res-fortress-escape", 418, typeof(byte), 1, false, "res-fortress-escape", false);
   AddOption(vars.manualOptions, "res-city-help-kid", 419, typeof(byte), 1, false, "res-city-help-kid", false);
@@ -216,8 +384,12 @@ init {
   Action<MemoryWatcherList, IntPtr, List<Dictionary<String, dynamic>>> AddMemoryWatchers = (memList, bPtr, options) => {
     foreach (Dictionary<String, dynamic> option in options) {
       var finalOffset = bPtr + (option["offset"]);
-      // TODO - use the type on the object to make this value properly.  Right now everything is a u8
-      memList.Add(new MemoryWatcher<byte>(finalOffset) { Name = option["id"] });
+      // Reflection magic to create a watcher targetting the correct type
+      Type memoryWatcherType = typeof(MemoryWatcher<>);
+      Type genericType = memoryWatcherType.MakeGenericType(option["type"]);
+      object instance = Activator.CreateInstance(genericType, finalOffset);
+      genericType.GetProperty("Name").SetValue(instance, option["id"]);
+      memList.Add((MemoryWatcher)instance);
       if (option["debug"] == true) {
         memList[option["id"]].Update(game);
         vars.DebugOutput(String.Format("Debug ({0}) -> ptr [{1}]; val [{2}]", option["id"], finalOffset.ToString("x8"), memList[option["id"]].Current), true);
@@ -275,15 +447,15 @@ isLoading {
 }
 
 split {
+  var debugThisIter = false;
+  if (vars.debugTick++ % 60 == 0) {
+    debugThisIter = true;
+  }
   Func<List<Dictionary<String, dynamic>>, bool> InspectValues = (list) => {
-    var debugThisIter = false;
-    if (vars.debugTick++ % 60 == 0) {
-      debugThisIter = true;
-    }
     foreach (Dictionary<String, dynamic> option in list) {
       var watcher = vars.watchers[option["id"]];
       if (option["debug"] && debugThisIter) {
-        vars.DebugOutput(String.Format("Debug ({0}) -> old [{1}]; current [{2}]", option["id"], watcher.Old, watcher.Current), settings["asl_settings_debug"]);
+        vars.DebugOutput(String.Format("Debug ({0}) -> old [{1}]; current [{2}]; splitVal: [{3}]", option["id"], watcher.Old, watcher.Current, option["splitVal"]), settings["asl_settings_debug"]);
       }
       if (settings[option["id"]]) {
         // if we don't care about the amount, split on any change
@@ -300,6 +472,7 @@ split {
   };
   foreach (List<Dictionary<String, dynamic>> optionList in vars.optionLists) {
     if (InspectValues(optionList)) {
+      vars.DebugOutput("Splitting!", settings["asl_settings_debug"]);
       return true;
     }
   }

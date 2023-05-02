@@ -24,8 +24,15 @@ def type_to_typename(given_type):
   elif given_type == "uint32":
     return "uint"
 
-def generate_option_string(listVarName, label, offset, type, size, name):
-  return "  AddOption(vars.{}, \"{}\", {}, typeof({}), {}, false, \"{}\", false);\n".format(listVarName, label, offset, type, size, name)
+def type_to_splitval(given_type):
+  if given_type == "bool":
+    # OpenGOAL "bools" are usually "symbols" but symbols are 4 bytes.  TOO BIG instead we use uint8's set to 0 or 1
+    return "1"
+  else:
+    return "null"
+
+def generate_option_string(listVarName, label, offset, type, splitVal, name):
+  return "  AddOption(vars.{}, \"{}\", {}, typeof({}), {}, false, \"{}\", false);\n".format(listVarName, label, offset, type, splitVal, name)
 
 def generate_options(input_file, output_file):
   # Settings To Emit
@@ -40,19 +47,36 @@ def generate_options(input_file, output_file):
       option_name = option["label"]
       if "name" in option:
           option_name = option["name"]
-      option_str = generate_option_string("manualOptions", option["label"], curr_offset, type_to_typename(option["type"]), type_to_offset(option["type"]), option_name)
+      option_str = generate_option_string("manualOptions", option["label"], curr_offset, type_to_typename(option["type"]), type_to_splitval(option["type"]), option_name)
       if "hidden" not in option or option["hidden"] is not True:
         # Add to manual settings
         manual_settings.append(option_str)
-      option_map[option["label"]] = option_str
+      option_map[option["label"]] = {
+        "name": option_name,
+        "label": option["label"],
+        "offset": curr_offset,
+        "type": type_to_typename(option["type"]),
+        "splitVal": type_to_splitval(option["type"])
+      }
       curr_offset = curr_offset + type_to_offset(option["type"])
     # Process presets
     for preset in options["presets"]:
       curr_preset_lines = []
       curr_preset_lines.append("  vars.{} = new List<Dictionary<String, dynamic>>();\n".format(preset["varName"]))
       for option in preset["options"]:
-        # TODO - this is lazy
-        curr_preset_lines.append(option_map[option].replace("manualOptions, \"", "{}, \"{}_".format(preset["varName"], preset["varName"])))
+        optionLabel = ""
+        splitVal = ""
+        optionName = ""
+        if isinstance(option, str):
+          optionLabel = option
+          splitVal = option_map[optionLabel]["splitVal"]
+          optionName = option_map[optionLabel]["name"]
+        else:
+          optionLabel = option["label"]
+          splitVal = option["splitVal"]
+          optionName = option["name"]
+        option_str = generate_option_string(preset["varName"], "{}_{}".format(preset["varName"], optionLabel), option_map[optionLabel]["offset"], option_map[optionLabel]["type"], splitVal, optionName)
+        curr_preset_lines.append(option_str)
       curr_preset_lines.append("  settings.Add(\"preset_{}\", false, \"{}\");\n".format(preset["varName"], preset["name"]))
       curr_preset_lines.append("  AddToSettings(vars.{}, \"preset_{}\");\n".format(preset["varName"], preset["varName"]))
       curr_preset_lines.append("  vars.optionLists.Add(vars.{});\n".format(preset["varName"]))
