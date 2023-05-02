@@ -1,0 +1,3 @@
+- oracle powerups / guns / upgrades / access passes
+- introductions (to allow for "talk to")
+- highscores (are resolutions enough for this?)
