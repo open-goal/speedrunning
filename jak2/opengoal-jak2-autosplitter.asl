@@ -384,8 +384,12 @@ init {
   Action<MemoryWatcherList, IntPtr, List<Dictionary<String, dynamic>>> AddMemoryWatchers = (memList, bPtr, options) => {
     foreach (Dictionary<String, dynamic> option in options) {
       var finalOffset = bPtr + (option["offset"]);
-      // TODO - use the type on the object to make this value properly.  Right now everything is a u8
-      memList.Add(new MemoryWatcher<byte>(finalOffset) { Name = option["id"] });
+      // Reflection magic to create a watcher targetting the correct type
+      Type memoryWatcherType = typeof(MemoryWatcher<>);
+      Type genericType = memoryWatcherType.MakeGenericType(option["type"]);
+      object instance = Activator.CreateInstance(genericType, finalOffset);
+      genericType.GetProperty("Name").SetValue(instance, option["id"]);
+      memList.Add((MemoryWatcher)instance);
       if (option["debug"] == true) {
         memList[option["id"]].Update(game);
         vars.DebugOutput(String.Format("Debug ({0}) -> ptr [{1}]; val [{2}]", option["id"], finalOffset.ToString("x8"), memList[option["id"]].Current), true);
@@ -443,15 +447,15 @@ isLoading {
 }
 
 split {
+  var debugThisIter = false;
+  if (vars.debugTick++ % 60 == 0) {
+    debugThisIter = true;
+  }
   Func<List<Dictionary<String, dynamic>>, bool> InspectValues = (list) => {
-    var debugThisIter = false;
-    if (vars.debugTick++ % 60 == 0) {
-      debugThisIter = true;
-    }
     foreach (Dictionary<String, dynamic> option in list) {
       var watcher = vars.watchers[option["id"]];
       if (option["debug"] && debugThisIter) {
-        vars.DebugOutput(String.Format("Debug ({0}) -> old [{1}]; current [{2}]", option["id"], watcher.Old, watcher.Current), settings["asl_settings_debug"]);
+        vars.DebugOutput(String.Format("Debug ({0}) -> old [{1}]; current [{2}]; splitVal: [{3}]", option["id"], watcher.Old, watcher.Current, option["splitVal"]), settings["asl_settings_debug"]);
       }
       if (settings[option["id"]]) {
         // if we don't care about the amount, split on any change
@@ -468,6 +472,7 @@ split {
   };
   foreach (List<Dictionary<String, dynamic>> optionList in vars.optionLists) {
     if (InspectValues(optionList)) {
+      vars.DebugOutput("Splitting!", settings["asl_settings_debug"]);
       return true;
     }
   }
