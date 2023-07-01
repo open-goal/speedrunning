@@ -399,8 +399,16 @@ init {
   vars.foundPointers = false;
   byte[] marker = Encoding.ASCII.GetBytes("UnLiStEdStRaTs_JaK1" + Char.MinValue);
   vars.debugTick = 0;
-  vars.DebugOutput(String.Format("Base Addr - {0}", modules.First().BaseAddress.ToString("x8")), true);
-  exported_ptr = new SignatureScanner(game, modules.First().BaseAddress, modules.First().ModuleMemorySize).Scan(
+  // NOTE - the subtraction is a total hack.  When we switched to SDL the statically linked binary now has this new `No Access` region of 0x1000 bytes near the end of the first module
+  // This feels like a total hack and is brittle (memory layout can change in the future, sizes can change, new regions can be added).
+  //
+  // 28672 = 0x7000 and this is the size from the end of the first module to before the beginning of this No Access region at the time of writing.
+  //
+  // However, since this is a hack, we should probably be a bit more conservative incase more the region layout changes.
+  //
+  // LiveSplit tries to read the entire region it's given into memory and a partial read is a failure.
+  vars.DebugOutput(String.Format("Scanning First Module - {0}->{1}", modules.First().BaseAddress.ToString("x8"), (modules.First().BaseAddress.ToInt64() + modules.First().ModuleMemorySize - 100000).ToString("x8")), true);
+  exported_ptr = new SignatureScanner(game, modules.First().BaseAddress, modules.First().ModuleMemorySize - 100000).Scan(
     new SigScanTarget(marker.Length, marker)
   );
 
