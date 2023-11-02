@@ -408,7 +408,7 @@ init {
   //
   // LiveSplit tries to read the entire region it's given into memory and a partial read is a failure.
   vars.DebugOutput(String.Format("Scanning First Module - {0}->{1}", modules.First().BaseAddress.ToString("x8"), (modules.First().BaseAddress.ToInt64() + modules.First().ModuleMemorySize - 100000).ToString("x8")), true);
-  exported_ptr = new SignatureScanner(game, modules.First().BaseAddress, modules.First().ModuleMemorySize - 100000).Scan(
+  exported_ptr = new SignatureScanner(game, modules.First().BaseAddress, modules.First().ModuleMemorySize - 200000).Scan(
     new SigScanTarget(marker.Length, marker)
   );
 

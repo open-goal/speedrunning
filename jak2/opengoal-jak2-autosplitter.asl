@@ -362,7 +362,7 @@ init {
   byte[] marker = Encoding.ASCII.GetBytes("UnLiStEdStRaTs_JaK2" + Char.MinValue);
   vars.debugTick = 0;
   vars.DebugOutput(String.Format("Base Addr - {0}", modules.First().BaseAddress.ToString("x8")), true);
-  exported_ptr = new SignatureScanner(game, modules.First().BaseAddress, modules.First().ModuleMemorySize).Scan(
+  exported_ptr = new SignatureScanner(game, modules.First().BaseAddress, modules.First().ModuleMemorySize - 200000).Scan(
     new SigScanTarget(marker.Length, marker)
   );
 
