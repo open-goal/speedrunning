@@ -39,6 +39,7 @@ startup {
   AddOption(vars.endingConditions, "endingConditions_kor-death", 12, typeof(byte), 1, false, "Kor Death", false);
   AddOption(vars.endingConditions, "endingConditions_all-collectables", 13, typeof(byte), 1, false, "All Collectables", false);
   AddOption(vars.endingConditions, "endingConditions_all-orbs", 4, typeof(uint), 286, false, "All Orbs", false);
+  AddOption(vars.endingConditions, "endingConditions_all-open-orbs", 4, typeof(uint), 95, false, "All Open Orbs", false);
   settings.Add("group_endingConditions", true, "Ending Conditions");
   AddToSettings(vars.endingConditions, "group_endingConditions");
 
