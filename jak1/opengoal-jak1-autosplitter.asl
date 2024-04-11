@@ -161,7 +161,7 @@ startup {
   settings.Add("jak1_level_scout_flies_citadel", true, "Gol and Maia's Citadel", "jak1_level_scout_flies");
   AddToSettings(vars.citadelScoutFlies, "jak1_level_scout_flies_citadel");
   vars.optionLists.Add(vars.citadelScoutFlies);
-  
+
   // Need Resolution Splits (power cells) - offset is relative from the need resolution block of the struct
   settings.Add("jak1_need_res", true, "Power Cells");
   var jak1_need_res_offset = 424;
@@ -331,7 +331,7 @@ startup {
   AddOption(vars.snowyResolutions, "res_snow_bunnies", jak1_need_res_offset + 69, typeof(byte), 1, false, "Survive the Lurker Infested Cave", false);
   AddOption(vars.snowyResolutions, "res_snow_buzzer", jak1_need_res_offset + 70, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   AddOption(vars.snowyResolutions, "res_snow_bumpers", jak1_need_res_offset + 71, typeof(byte), 1, false, "Deactivate the Precursor Blockers", false);
-  AddOption(vars.snowyResolutions, "res_snow_cage", jak1_need_res_offset + 72, typeof(byte), 1, false, "Opent the Frozen Crate", false);
+  AddOption(vars.snowyResolutions, "res_snow_cage", jak1_need_res_offset + 72, typeof(byte), 1, false, "Open the Frozen Crate", false);
   //The task below is unsed in retail versions of the game.
   //AddOption(vars.snowyResolutions, "res_red_eggtop", jak1_need_res_offset + 73, typeof(byte), 1, false, "red_eggtop", false);
   settings.Add("jak1_need_res_snowy", true, "Snowy Mountain", "jak1_need_res");
