@@ -460,6 +460,26 @@
     {
       "label": "res-stadium-burning-bush-race-class1-r",
       "type": "bool"
+    },
+    {
+      "label": "tomb-poles-poles",
+      "type": "bool"
+    },
+    {
+      "label": "fortress-save-friends-introduction",
+      "type": "bool"
+    },
+    {
+      "label": "sewer-escort-get-gun",
+      "type": "bool"
+    },
+    {
+      "label": "forest-protect-introduction",
+      "type": "bool"
+    },
+    {
+      "label": "forest-protect-meeting",
+      "type": "bool"
     }
   ],
   "presets": [
@@ -469,16 +489,21 @@
       "options": [
         "res-fortress-escape",
         "res-city-help-kid",
+        "tomb-poles-poles",
         "res-tomb-poles",
         "res-tomb-water",
         "res-tomb-boss",
+        "fortress-save-friends-introduction",
         "res-fortress-save-friends",
         "res-sewer-escort",
         "res-city-stop-bomb-bots",
         "res-stadium-race-class2",
+        "sewer-escort-get-gun",
         "res-city-dark-gun-training",
         "res-city-errol-challenge",
         "res-ruins-mech",
+        "forest-protect-introduction",
+        "forest-protect-meeting",
         "res-forest-protect",
         "res-strip-drop",
         "res-drill-mech",
