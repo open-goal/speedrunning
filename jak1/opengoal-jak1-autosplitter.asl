@@ -180,7 +180,9 @@ startup {
   // Village 1
   vars.village1Resolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.village1Resolutions, "res_village1_yakow", jak1_need_res_offset + 12, typeof(byte), 1, false, "Herd the Yakows into their pen", false);
+  AddOption(vars.village1Resolutions, "res_misty_muse", jak1_need_res_offset + 26, typeof(byte), 1, false, "Turn in the Sculptor's Muse", false);
   AddOption(vars.village1Resolutions, "res_village1_mayor_money", jak1_need_res_offset + 13, typeof(byte), 1, false, "Bring 90 orbs to the Mayor", false);
+  AddOption(vars.village1Resolutions, "res_jungle_lurkerm", jak1_need_res_offset + 5, typeof(byte), 1, false, "Turn in Eco Beams", false);
   AddOption(vars.village1Resolutions, "res_village1_uncle_money", jak1_need_res_offset + 14, typeof(byte), 1, false, "Bring 90 orbs to your Uncle", false);
   AddOption(vars.village1Resolutions, "res_village1_oracle_money1", jak1_need_res_offset + 15, typeof(byte), 1, false, "Bring 120 orbs to the Oracle", false);
   AddOption(vars.village1Resolutions, "res_village1_oracle_money2", jak1_need_res_offset + 16, typeof(byte), 1, false, "Bring another 120 orbs to the Oracle", false);
@@ -207,7 +209,7 @@ startup {
   // Jungle
   vars.jungleResolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.jungleResolutions, "res_jungle_eggtop", jak1_need_res_offset + 4, typeof(byte), 1, false, "Find the Blue Vent Switch", false);
-  AddOption(vars.jungleResolutions, "res_jungle_lurkerm", jak1_need_res_offset + 5, typeof(byte), 1, false, "Connect the Eco Beams", false);
+  AddOption(vars.jungleResolutions, "com_jungle_lurkerm", jak1_need_res_offset + 108, typeof(byte), 1, false, "Connect the Eco Beams", false);
   AddOption(vars.jungleResolutions, "res_jungle_tower", jak1_need_res_offset + 6, typeof(byte), 1, false, "Get to the Top of the Temple", false);
   AddOption(vars.jungleResolutions, "res_jungle_fishgame", jak1_need_res_offset + 7, typeof(byte), 1, false, "Catch 200 Pounds of Fish", false);
   AddOption(vars.jungleResolutions, "res_jungle_plant", jak1_need_res_offset + 8, typeof(byte), 1, false, "Defeat the Dark Eco Plant", false);
@@ -222,7 +224,7 @@ startup {
   // Misty
   vars.mistyResolutions = new List<Dictionary<String, dynamic>>();
 
-  AddOption(vars.mistyResolutions, "res_misty_muse", jak1_need_res_offset + 26, typeof(byte), 1, false, "Catch the Sculptors Muse", false);
+  AddOption(vars.mistyResolutions, "com_misty_muse", jak1_need_res_offset + 109, typeof(byte), 1, false, "Catch the Sculptors Muse", false);
   AddOption(vars.mistyResolutions, "res_misty_boat", jak1_need_res_offset + 27, typeof(byte), 1, false, "Climb the Lurker Ship", false);
   AddOption(vars.mistyResolutions, "res_misty_warehouse", jak1_need_res_offset + 28, typeof(byte), 1, false, "Return to the Dark Eco Pool", false);
   AddOption(vars.mistyResolutions, "res_misty_cannon", jak1_need_res_offset + 29, typeof(byte), 1, false, "Stop the Cannon", false);
@@ -244,7 +246,9 @@ startup {
 
   // Village 2
   vars.village2Resolutions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.village2Resolutions, "res_rolling_race", jak1_need_res_offset + 57, typeof(byte), 1, false, "Turn in the Gambler's Race", false);
   AddOption(vars.village2Resolutions, "res_village2_gambler_money", jak1_need_res_offset + 34, typeof(byte), 1, false, "Bring 90 Orbs to the Gambler", false);
+  AddOption(vars.village2Resolutions, "res_rolling_moles", jak1_need_res_offset + 59, typeof(byte), 1, false, "Turn in Lightning Moles", false);
   AddOption(vars.village2Resolutions, "res_village2_geologist_money", jak1_need_res_offset + 35, typeof(byte), 1, false, "Bring 90 Orbs to the Geologist", false);
   AddOption(vars.village2Resolutions, "res_village2_warrior_money", jak1_need_res_offset + 36, typeof(byte), 1, false, "Bring 90 Orbs to the Warrior", false);
   AddOption(vars.village2Resolutions, "res_village2_oracle_money1", jak1_need_res_offset + 37, typeof(byte), 1, false, "Bring 120 Orbs to the oracle", false);
@@ -286,9 +290,9 @@ startup {
 
   // Rolling
   vars.rollingResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.rollingResolutions, "res_rolling_race", jak1_need_res_offset + 57, typeof(byte), 1, false, "Beat Record Time on the Gorge", false);
+  AddOption(vars.rollingResolutions, "com_rolling_race", jak1_need_res_offset + 111, typeof(byte), 1, false, "Beat Record Time on the Gorge", false);
   AddOption(vars.rollingResolutions, "res_rolling_robbers", jak1_need_res_offset + 58, typeof(byte), 1, false, "Catch the Flying Lurkers", false);
-  AddOption(vars.rollingResolutions, "res_rolling_moles", jak1_need_res_offset + 59, typeof(byte), 1, false, "Herd the Moles into their Hole", false);
+  AddOption(vars.rollingResolutions, "com_rolling_moles", jak1_need_res_offset + 110, typeof(byte), 1, false, "Herd the Moles into their Hole", false);
   AddOption(vars.rollingResolutions, "res_rolling_plants", jak1_need_res_offset + 60, typeof(byte), 1, false, "Cure Dark Eco Infected Plants", false);
   AddOption(vars.rollingResolutions, "res_rolling_lake", jak1_need_res_offset + 61, typeof(byte), 1, false, "Get the Power Cell over the Lake", false);
   AddOption(vars.rollingResolutions, "res_rolling_buzzer", jak1_need_res_offset + 62, typeof(byte), 1, false, "Free 7 Scout Flies", false);
@@ -375,18 +379,16 @@ startup {
   AddToSettings(vars.citadelResolutions, "jak1_need_res_citadel");
   vars.optionLists.Add(vars.citadelResolutions);
 
-  // NOTE - skipping `need_res_intro` because it's skipped when starting a run anyway
-
-  // Misc Tasks
+  // Final Task
   // - other tasks other than `need_resolution` ones, the ones deemed useful enough to be added
-  settings.Add("jak1_misc_tasks", true, "Final Task");
-  vars.miscallenousTasks = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.miscallenousTasks, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco", false);
-  AddToSettings(vars.miscallenousTasks, "jak1_misc_tasks");
-  vars.optionLists.Add(vars.miscallenousTasks);
+  settings.Add("jak1_final_task", true, "Final Task");
+  vars.finalTask = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.finalTask, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco", false);
+  AddToSettings(vars.finalTask, "jak1_final_task");
+  vars.optionLists.Add(vars.finalTask);
 
   // Treat this one as special, so we can ensure the timer ends no matter what!
-  vars.finalSplitTask = vars.miscallenousTasks[0];
+  vars.finalSplitTask = vars.finalTask[0];
 
   vars.DebugOutput("Finished {startup}", true);
 }
