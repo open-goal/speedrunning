@@ -379,16 +379,16 @@ startup {
   AddToSettings(vars.citadelResolutions, "jak1_need_res_citadel");
   vars.optionLists.Add(vars.citadelResolutions);
 
-  // Final Task
+  // Misc Tasks
   // - other tasks other than `need_resolution` ones, the ones deemed useful enough to be added
-  settings.Add("jak1_final_task", true, "Final Task");
-  vars.finalTask = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.finalTask, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco", false);
-  AddToSettings(vars.finalTask, "jak1_final_task");
-  vars.optionLists.Add(vars.finalTask);
+  settings.Add("jak1_misc_tasks", true, "Final Task");
+  vars.miscallenousTasks = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.miscallenousTasks, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco", false);
+  AddToSettings(vars.miscallenousTasks, "jak1_misc_tasks");
+  vars.optionLists.Add(vars.miscallenousTasks);
 
   // Treat this one as special, so we can ensure the timer ends no matter what!
-  vars.finalSplitTask = vars.finalTask[0];
+  vars.finalSplitTask = vars.miscallenousTasks[0];
 
   vars.DebugOutput("Finished {startup}", true);
 }
