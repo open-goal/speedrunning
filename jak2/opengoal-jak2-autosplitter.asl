@@ -57,7 +57,6 @@ startup {
   AddOption(vars.anyPercent, "anyPercent_res-city-stop-bomb-bots", 468, typeof(byte), 1, false, "res-city-stop-bomb-bots", false);
   AddOption(vars.anyPercent, "anyPercent_res-stadium-race-class2", 467, typeof(byte), 1, false, "res-stadium-race-class2", false);
   AddOption(vars.anyPercent, "anyPercent_sewer-escort-get-gun", 524, typeof(byte), 1, false, "sewer-escort-get-gun", false);
-  AddOption(vars.anyPercent, "anyPercent_res-city-dark-gun-training", 466, typeof(byte), 1, false, "res-city-dark-gun-training", false);
   AddOption(vars.anyPercent, "anyPercent_res-city-errol-challenge", 469, typeof(byte), 1, false, "res-city-errol-challenge", false);
   AddOption(vars.anyPercent, "anyPercent_res-ruins-mech", 471, typeof(byte), 1, false, "res-ruins-mech", false);
   AddOption(vars.anyPercent, "anyPercent_forest-protect-introduction", 525, typeof(byte), 1, false, "forest-protect-introduction", false);
@@ -151,7 +150,7 @@ startup {
   AddToSettings(vars.allMissions, "preset_allMissions");
   vars.optionLists.Add(vars.allMissions);
   vars.hundredPercent = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.hundredPercent, "hundredPercent_res-fortress-escape", 418, typeof(byte), 1, false, "res-fortress-escape", true);
+  AddOption(vars.hundredPercent, "hundredPercent_res-fortress-escape", 418, typeof(byte), 1, false, "res-fortress-escape", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-city-help-kid", 419, typeof(byte), 1, false, "res-city-help-kid", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-ruins-tower", 421, typeof(byte), 1, false, "res-ruins-tower", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-atoll-water", 422, typeof(byte), 1, false, "res-atoll-water", false);
@@ -239,7 +238,7 @@ startup {
   AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-12", 507, typeof(byte), 1, false, "res-city-burning-bush-get-to-12", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-bombbot-1", 508, typeof(byte), 1, false, "res-city-burning-bush-bombbot-1", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-15", 511, typeof(byte), 1, false, "res-city-burning-bush-get-to-15", false);
-  AddOption(vars.hundredPercent, "hundredPercent_numSkullgems", 8, typeof(uint), 500, false, "500 Skull Gems", true);
+  AddOption(vars.hundredPercent, "hundredPercent_numSkullgems", 8, typeof(uint), 500, false, "500 Skull Gems", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-collection-3", 512, typeof(byte), 1, false, "res-city-burning-bush-collection-3", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-14", 510, typeof(byte), 1, false, "res-city-burning-bush-get-to-14", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-city-burning-bush-get-to-11", 505, typeof(byte), 1, false, "res-city-burning-bush-get-to-11", false);
