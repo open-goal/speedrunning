@@ -556,6 +556,10 @@
     {
       "label": "res-desert-bbush-destroy-interceptors",
       "type": "bool"
+    },
+    {
+      "label": "arena-fight-1-throne",
+      "type": "bool"
     }
   ],
   "presets": [
@@ -564,7 +568,7 @@
       "varName": "anyPercent",
       "options": [
         "res-arena-training-1",
-        "res-arena-fight-1",
+        "arena-fight-1-throne",
         "res-wascity-chase",
         "res-temple-defend",
         "res-palace-ruins-patrol",
@@ -579,7 +583,7 @@
       "varName": "noOob",
       "options": [
         "res-arena-training-1",
-        "res-arena-fight-1",
+        "arena-fight-1-throne",
         "res-temple-oracle",
         "res-temple-tests",
         "res-comb-travel",
@@ -598,7 +602,7 @@
       "varName": "anyhero",
       "options": [
         "res-arena-training-1",
-        "res-arena-fight-1",
+        "arena-fight-1-throne",
         "res-wascity-chase",
         "res-temple-defend",
         "res-palace-ruins-patrol",
@@ -613,7 +617,7 @@
       "varName": "allMissions",
       "options": [
         "res-arena-training-1",
-        "res-arena-fight-1",
+        "arena-fight-1-throne",
         "res-wascity-chase",
         "res-wascity-pre-game",
         "res-desert-turtle-training",
@@ -681,7 +685,7 @@
       "varName": "hundredPercent",
       "options": [
         "res-arena-training-1",
-        "res-arena-fight-1",
+        "arena-fight-1-throne",
         "res-wascity-chase",
         "res-wascity-pre-game",
         "res-desert-turtle-training",
