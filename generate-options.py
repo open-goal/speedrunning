@@ -113,4 +113,4 @@ def generate_options(input_file, output_file):
     f.writelines(new_lines)
 
 
-generate_options("./jak2/options.json", "./jak2/opengoal-jak2-autosplitter.asl")
+generate_options("./jak3/options.json", "./jak3/opengoal-jak3-autosplitter.asl")

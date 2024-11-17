@@ -1,0 +1,818 @@
+{
+  "structFields": [
+    {
+      "label": "versionMajor",
+      "type": "uint16",
+      "hidden": true
+    },
+    {
+      "label": "versionMinor",
+      "type": "uint16",
+      "hidden": true
+    },
+    {
+      "label": "numOrbs",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "numSkullgems",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "padding",
+      "type": "uint8[200]",
+      "hidden": true
+    },
+    {
+      "label": "gameHash",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "inCutscene",
+      "type": "bool",
+      "hidden": true
+    },
+    {
+      "label": "isLoading",
+      "type": "bool",
+      "hidden": true
+    },
+    {
+      "label": "padding",
+      "type": "uint8[200]",
+      "hidden": true
+    },
+    {
+      "label": "res-arena-training-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-arena-fight-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-chase",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-pre-game",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-turtle-training",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-course-race",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-artifact-race-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-leaper-race",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-hover",
+      "type": "bool"
+    },
+    {
+      "label": "res-arena-fight-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-catch-lizards",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-rescue",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-gungame",
+      "type": "bool"
+    },
+    {
+      "label": "res-arena-fight-3",
+      "type": "bool"
+    },
+    {
+      "label": "res-nest-eggs",
+      "type": "bool"
+    },
+    {
+      "label": "res-temple-climb",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-glide",
+      "type": "bool"
+    },
+    {
+      "label": "res-volcano-darkeco",
+      "type": "bool"
+    },
+    {
+      "label": "res-temple-oracle",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-oasis-defense",
+      "type": "bool"
+    },
+    {
+      "label": "res-temple-tests",
+      "type": "bool"
+    },
+    {
+      "label": "res-comb-travel",
+      "type": "bool"
+    },
+    {
+      "label": "res-mine-explore",
+      "type": "bool"
+    },
+    {
+      "label": "res-mine-blow",
+      "type": "bool"
+    },
+    {
+      "label": "res-mine-boss",
+      "type": "bool"
+    },
+    {
+      "label": "res-sewer-met-hum",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-vehicle-training",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-port-fight",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-port-attack",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-gun-course-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-sniper-fight",
+      "type": "bool"
+    },
+    {
+      "label": "res-sewer-kg-met",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-destroy-darkeco",
+      "type": "bool"
+    },
+    {
+      "label": "res-forest-kill-plants",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-destroy-grid",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-hijack-vehicle",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-port-assault",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-gun-course-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-blow-barricade",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-protect-hq",
+      "type": "bool"
+    },
+    {
+      "label": "res-sewer-hum-kg",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-power-game",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-artifact-race-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-nest-hunt",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-beast-battle",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-jump-mission",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-chase-marauders",
+      "type": "bool"
+    },
+    {
+      "label": "res-forest-ring-chase",
+      "type": "bool"
+    },
+    {
+      "label": "res-factory-sky-battle",
+      "type": "bool"
+    },
+    {
+      "label": "res-factory-assault",
+      "type": "bool"
+    },
+    {
+      "label": "res-factory-boss",
+      "type": "bool"
+    },
+    {
+      "label": "res-temple-defend",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-defend",
+      "type": "bool"
+    },
+    {
+      "label": "res-forest-turn-on-machine",
+      "type": "bool"
+    },
+    {
+      "label": "res-precursor-tour",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-blow-tower",
+      "type": "bool"
+    },
+    {
+      "label": "res-tower-destroy",
+      "type": "bool"
+    },
+    {
+      "label": "res-palace-ruins-patrol",
+      "type": "bool"
+    },
+    {
+      "label": "res-palace-ruins-attack",
+      "type": "bool"
+    },
+    {
+      "label": "res-comb-wild-ride",
+      "type": "bool"
+    },
+    {
+      "label": "res-precursor-destroy-ship",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-final-boss",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-win",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-3",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-4",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-5",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-6",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-7",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-8",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-9",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-11",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-12",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-14",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-16",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-17",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-get-to-18",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-get-to-19",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-get-to-20",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-get-to-21",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-get-to-22",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-get-to-23",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-get-to-24",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-get-to-25",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-26",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-27",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-28",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-29",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-30",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-31",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-32",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-33",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-34",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-35",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-36",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-37",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-38",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-39",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-40",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-41",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-42",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-43",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-get-to-44",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-ring-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-ring-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-ring-3",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-ring-4",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-ring-5",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-ring-6",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-egg-spider-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-spirit-chase-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-spirit-chase-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-spirit-chase-3",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-timer-chase-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-wascity-bbush-timer-chase-2",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-air-time",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-total-air-time",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-jump-distance",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-total-jump-distance",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-roll-count",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-time-trial-1",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-rally",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-bbush-port-attack",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-rescue-bbush",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-gun-course-play-for-fun",
+      "type": "bool"
+    },
+    {
+      "label": "res-city-jetboard-bbush",
+      "type": "bool"
+    },
+    {
+      "label": "res-desert-bbush-destroy-interceptors",
+      "type": "bool"
+    },
+    {
+      "label": "arena-fight-1-throne",
+      "type": "bool"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Any%",
+      "varName": "anyPercent",
+      "options": [
+        "res-arena-training-1",
+        "arena-fight-1-throne",
+        "res-wascity-chase",
+        "res-temple-defend",
+        "res-palace-ruins-patrol",
+        "res-palace-ruins-attack",
+        "res-comb-wild-ride",
+        "res-precursor-destroy-ship",
+        "res-desert-final-boss"
+      ]
+    },
+    {
+      "name": "Any% No OoB",
+      "varName": "noOob",
+      "options": [
+        "res-arena-training-1",
+        "arena-fight-1-throne",
+        "res-temple-oracle",
+        "res-temple-tests",
+        "res-comb-travel",
+        "res-mine-explore",
+        "res-mine-blow",
+        "res-mine-boss",
+        "res-palace-ruins-patrol",
+        "res-palace-ruins-attack",
+        "res-comb-wild-ride",
+        "res-precursor-destroy-ship",
+        "res-desert-final-boss"
+      ]
+    },
+    {
+      "name": "Any% Hero Mode",
+      "varName": "anyhero",
+      "options": [
+        "res-arena-training-1",
+        "arena-fight-1-throne",
+        "res-wascity-chase",
+        "res-temple-defend",
+        "res-palace-ruins-patrol",
+        "res-palace-ruins-attack",
+        "res-comb-wild-ride",
+        "res-precursor-destroy-ship",
+        "res-desert-final-boss"
+      ]
+    },
+    {
+      "name": "All Missions",
+      "varName": "allMissions",
+      "options": [
+        "res-arena-training-1",
+        "arena-fight-1-throne",
+        "res-wascity-chase",
+        "res-wascity-pre-game",
+        "res-desert-turtle-training",
+        "res-desert-course-race",
+        "res-desert-artifact-race-1",
+        "res-wascity-leaper-race",
+        "res-desert-hover",
+        "res-arena-fight-2",
+        "res-desert-catch-lizards",
+        "res-desert-rescue",
+        "res-wascity-gungame",
+        "res-arena-fight-3",
+        "res-nest-eggs",
+        "res-temple-climb",
+        "res-desert-glide",
+        "res-volcano-darkeco",
+        "res-temple-oracle",
+        "res-desert-oasis-defense",
+        "res-temple-tests",
+        "res-comb-travel",
+        "res-mine-explore",
+        "res-mine-blow",
+        "res-mine-boss",
+        "res-sewer-met-hum",
+        "res-city-vehicle-training",
+        "res-city-port-fight",
+        "res-city-port-attack",
+        "res-city-gun-course-1",
+        "res-city-sniper-fight",
+        "res-sewer-kg-met",
+        "res-city-destroy-darkeco",
+        "res-forest-kill-plants",
+        "res-city-destroy-grid",
+        "res-city-hijack-vehicle",
+        "res-city-port-assault",
+        "res-city-gun-course-2",
+        "res-city-blow-barricade",
+        "res-city-protect-hq",
+        "res-sewer-hum-kg",
+        "res-city-power-game",
+        "res-desert-artifact-race-2",
+        "res-nest-hunt",
+        "res-desert-beast-battle",
+        "res-desert-jump-mission",
+        "res-desert-chase-marauders",
+        "res-forest-ring-chase",
+        "res-factory-sky-battle",
+        "res-factory-assault",
+        "res-factory-boss",
+        "res-temple-defend",
+        "res-wascity-defend",
+        "res-forest-turn-on-machine",
+        "res-precursor-tour",
+        "res-city-blow-tower",
+        "res-tower-destroy",
+        "res-palace-ruins-patrol",
+        "res-palace-ruins-attack",
+        "res-comb-wild-ride",
+        "res-precursor-destroy-ship",
+        "res-desert-final-boss"
+      ]
+    },
+    {
+      "name": "100%",
+      "varName": "hundredPercent",
+      "options": [
+        "res-arena-training-1",
+        "arena-fight-1-throne",
+        "res-wascity-chase",
+        "res-wascity-pre-game",
+        "res-desert-turtle-training",
+        "res-desert-course-race",
+        "res-desert-artifact-race-1",
+        "res-wascity-leaper-race",
+        "res-desert-hover",
+        "res-arena-fight-2",
+        "res-desert-catch-lizards",
+        "res-desert-rescue",
+        "res-wascity-gungame",
+        "res-arena-fight-3",
+        "res-nest-eggs",
+        "res-temple-climb",
+        "res-desert-glide",
+        "res-volcano-darkeco",
+        "res-temple-oracle",
+        "res-desert-oasis-defense",
+        "res-temple-tests",
+        "res-comb-travel",
+        "res-mine-explore",
+        "res-mine-blow",
+        "res-mine-boss",
+        "res-sewer-met-hum",
+        "res-city-vehicle-training",
+        "res-city-port-fight",
+        "res-city-port-attack",
+        "res-city-gun-course-1",
+        "res-city-sniper-fight",
+        "res-sewer-kg-met",
+        "res-city-destroy-darkeco",
+        "res-forest-kill-plants",
+        "res-city-destroy-grid",
+        "res-city-hijack-vehicle",
+        "res-city-port-assault",
+        "res-city-gun-course-2",
+        "res-city-blow-barricade",
+        "res-city-protect-hq",
+        "res-sewer-hum-kg",
+        "res-city-power-game",
+        "res-desert-artifact-race-2",
+        "res-nest-hunt",
+        "res-desert-beast-battle",
+        "res-desert-jump-mission",
+        "res-desert-chase-marauders",
+        "res-forest-ring-chase",
+        "res-factory-sky-battle",
+        "res-factory-assault",
+        "res-factory-boss",
+        "res-temple-defend",
+        "res-wascity-defend",
+        "res-forest-turn-on-machine",
+        "res-precursor-tour",
+        "res-city-blow-tower",
+        "res-tower-destroy",
+        "res-palace-ruins-patrol",
+        "res-palace-ruins-attack",
+        "res-comb-wild-ride",
+        "res-precursor-destroy-ship",
+        "res-desert-final-boss",
+        "res-city-win",
+        "res-desert-bbush-get-to-1",
+        "res-desert-bbush-get-to-2",
+        "res-desert-bbush-get-to-3",
+        "res-desert-bbush-get-to-4",
+        "res-desert-bbush-get-to-5",
+        "res-desert-bbush-get-to-6",
+        "res-desert-bbush-get-to-7",
+        "res-desert-bbush-get-to-8",
+        "res-desert-bbush-get-to-9",
+        "res-desert-bbush-get-to-11",
+        "res-desert-bbush-get-to-12",
+        "res-desert-bbush-get-to-14",
+        "res-desert-bbush-get-to-16",
+        "res-desert-bbush-get-to-17",
+        "res-wascity-bbush-get-to-18",
+        "res-desert-bbush-get-to-19",
+        "res-wascity-bbush-get-to-20",
+        "res-wascity-bbush-get-to-21",
+        "res-wascity-bbush-get-to-22",
+        "res-wascity-bbush-get-to-23",
+        "res-wascity-bbush-get-to-24",
+        "res-wascity-bbush-get-to-25",
+        "res-city-bbush-get-to-26",
+        "res-city-bbush-get-to-27",
+        "res-city-bbush-get-to-28",
+        "res-city-bbush-get-to-29",
+        "res-city-bbush-get-to-30",
+        "res-city-bbush-get-to-31",
+        "res-city-bbush-get-to-32",
+        "res-city-bbush-get-to-33",
+        "res-city-bbush-get-to-34",
+        "res-city-bbush-get-to-35",
+        "res-city-bbush-get-to-36",
+        "res-city-bbush-get-to-37",
+        "res-city-bbush-get-to-38",
+        "res-city-bbush-get-to-39",
+        "res-city-bbush-get-to-40",
+        "res-city-bbush-get-to-41",
+        "res-city-bbush-get-to-42",
+        "res-city-bbush-get-to-43",
+        "res-city-bbush-get-to-44",
+        "res-desert-bbush-ring-1",
+        "res-desert-bbush-ring-2",
+        "res-wascity-bbush-ring-3",
+        "res-wascity-bbush-ring-4",
+        "res-city-bbush-ring-5",
+        "res-city-bbush-ring-6",
+        "res-desert-bbush-egg-spider-1",
+        "res-desert-bbush-spirit-chase-1",
+        "res-wascity-bbush-spirit-chase-2",
+        "res-city-bbush-spirit-chase-3",
+        "res-desert-bbush-timer-chase-1",
+        "res-wascity-bbush-timer-chase-2",
+        "res-desert-bbush-air-time",
+        "res-desert-bbush-total-air-time",
+        "res-desert-bbush-jump-distance",
+        "res-desert-bbush-total-jump-distance",
+        "res-desert-bbush-roll-count",
+        "res-desert-bbush-time-trial-1",
+        "res-desert-bbush-rally",
+        "res-city-bbush-port-attack",
+        "res-desert-rescue-bbush",
+        "res-city-gun-course-play-for-fun",
+        "res-city-jetboard-bbush",
+        "res-desert-bbush-destroy-interceptors"
+      ]
+    }
+  ]
+}
