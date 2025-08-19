@@ -164,6 +164,14 @@ startup {
 
   // Need Resolution Splits (power cells) - offset is relative from the need resolution block of the struct
   settings.Add("jak1_need_res", true, "Power Cells");
+
+  // Generic Split for any Cell count change (for custom levels)
+  vars.genericSplits = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.genericSplits, "num_power_cells", 0, typeof(uint), null, false, "Split on any Cell pickup", false);
+  AddToSettings(vars.genericSplits, "jak1_need_res");
+  vars.optionLists.Add(vars.genericSplits);
+
+  // Specific Cell/Task Splits
   var jak1_need_res_offset = 424;
 
   // Training
