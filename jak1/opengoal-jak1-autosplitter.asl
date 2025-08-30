@@ -165,12 +165,6 @@ startup {
   // Need Resolution Splits (power cells) - offset is relative from the need resolution block of the struct
   settings.Add("jak1_need_res", true, "Power Cells");
 
-  // Generic Split for any Cell count change (for custom levels)
-  vars.genericSplits = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.genericSplits, "num_power_cells", 0, typeof(uint), null, false, "Split on any Cell pickup", false);
-  AddToSettings(vars.genericSplits, "jak1_need_res");
-  vars.optionLists.Add(vars.genericSplits);
-
   // Specific Cell/Task Splits
   var jak1_need_res_offset = 424;
 
@@ -217,14 +211,12 @@ startup {
   // Jungle
   vars.jungleResolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.jungleResolutions, "res_jungle_eggtop", jak1_need_res_offset + 4, typeof(byte), 1, false, "Find the Blue Vent Switch", false);
-  AddOption(vars.jungleResolutions, "com_jungle_lurkerm", jak1_need_res_offset + 108, typeof(byte), 1, false, "Connect the Eco Beams", false);
   AddOption(vars.jungleResolutions, "res_jungle_tower", jak1_need_res_offset + 6, typeof(byte), 1, false, "Get to the Top of the Temple", false);
   AddOption(vars.jungleResolutions, "res_jungle_fishgame", jak1_need_res_offset + 7, typeof(byte), 1, false, "Catch 200 Pounds of Fish", false);
   AddOption(vars.jungleResolutions, "res_jungle_plant", jak1_need_res_offset + 8, typeof(byte), 1, false, "Defeat the Dark Eco Plant", false);
   AddOption(vars.jungleResolutions, "res_jungle_buzzer", jak1_need_res_offset + 9, typeof(byte), 1, false, "Free 7 Scout Flies", false);
   AddOption(vars.jungleResolutions, "res_jungle_canyon_end", jak1_need_res_offset + 10, typeof(byte), 1, false, "Follow the canyon to the Sea", false);
   AddOption(vars.jungleResolutions, "res_jungle_temple_door", jak1_need_res_offset + 11, typeof(byte), 1, false, "Open the Locked Temple Door", false);
-  AddOption(vars.jungleResolutions, "int_jungle_fishgame", jak1_need_res_offset + 107, typeof(byte), 1, false, "Talk to Fisherman", false);
   settings.Add("jak1_need_res_jungle", true, "Forbidden Jungle", "jak1_need_res");
   AddToSettings(vars.jungleResolutions, "jak1_need_res_jungle");
   vars.optionLists.Add(vars.jungleResolutions);
@@ -232,7 +224,6 @@ startup {
   // Misty
   vars.mistyResolutions = new List<Dictionary<String, dynamic>>();
 
-  AddOption(vars.mistyResolutions, "com_misty_muse", jak1_need_res_offset + 109, typeof(byte), 1, false, "Catch the Sculptors Muse", false);
   AddOption(vars.mistyResolutions, "res_misty_boat", jak1_need_res_offset + 27, typeof(byte), 1, false, "Climb the Lurker Ship", false);
   AddOption(vars.mistyResolutions, "res_misty_warehouse", jak1_need_res_offset + 28, typeof(byte), 1, false, "Return to the Dark Eco Pool", false);
   AddOption(vars.mistyResolutions, "res_misty_cannon", jak1_need_res_offset + 29, typeof(byte), 1, false, "Stop the Cannon", false);
@@ -298,9 +289,7 @@ startup {
 
   // Rolling
   vars.rollingResolutions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.rollingResolutions, "com_rolling_race", jak1_need_res_offset + 111, typeof(byte), 1, false, "Beat Record Time on the Gorge", false);
   AddOption(vars.rollingResolutions, "res_rolling_robbers", jak1_need_res_offset + 58, typeof(byte), 1, false, "Catch the Flying Lurkers", false);
-  AddOption(vars.rollingResolutions, "com_rolling_moles", jak1_need_res_offset + 110, typeof(byte), 1, false, "Herd the Moles into their Hole", false);
   AddOption(vars.rollingResolutions, "res_rolling_plants", jak1_need_res_offset + 60, typeof(byte), 1, false, "Cure Dark Eco Infected Plants", false);
   AddOption(vars.rollingResolutions, "res_rolling_lake", jak1_need_res_offset + 61, typeof(byte), 1, false, "Get the Power Cell over the Lake", false);
   AddOption(vars.rollingResolutions, "res_rolling_buzzer", jak1_need_res_offset + 62, typeof(byte), 1, false, "Free 7 Scout Flies", false);
@@ -369,8 +358,6 @@ startup {
   vars.lavatubeResolutions = new List<Dictionary<String, dynamic>>();
   AddOption(vars.lavatubeResolutions, "res_lavatube_end", jak1_need_res_offset + 101, typeof(byte), 1, false, "Reach the end of the Lava Tube", false);
   AddOption(vars.lavatubeResolutions, "res_lavatube_buzzer", jak1_need_res_offset + 102, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  //This task below does not go with a in game Power Cell
-  AddOption(vars.lavatubeResolutions, "res_lavatube_balls", jak1_need_res_offset + 103, typeof(byte), 1, false, "Finish Oranges", false);
   settings.Add("jak1_need_res_lavatube", true, "Lava Tube", "jak1_need_res");
   AddToSettings(vars.lavatubeResolutions, "jak1_need_res_lavatube");
   vars.optionLists.Add(vars.lavatubeResolutions);
@@ -382,21 +369,44 @@ startup {
   AddOption(vars.citadelResolutions, "res_citadel_sage_red", jak1_need_res_offset + 78, typeof(byte), 1, false, "Free the Red Sage", false);
   AddOption(vars.citadelResolutions, "res_citadel_sage_yellow", jak1_need_res_offset + 79, typeof(byte), 1, false, "Free the Yellow Sage", false);
   AddOption(vars.citadelResolutions, "res_citadel_buzzer", jak1_need_res_offset + 80, typeof(byte), 1, false, "Free 7 Scout Flies", false);
-  AddOption(vars.citadelResolutions, "unk_finalboss_movies", jak1_need_res_offset + 106, typeof(byte), 1, false, "Light Eco?!?! That could be the stuff to change me back!", false);
   settings.Add("jak1_need_res_citadel", true, "Gol and Maia's Citadel", "jak1_need_res");
   AddToSettings(vars.citadelResolutions, "jak1_need_res_citadel");
   vars.optionLists.Add(vars.citadelResolutions);
 
-  // Misc Tasks
-  // - other tasks other than `need_resolution` ones, the ones deemed useful enough to be added
-  settings.Add("jak1_misc_tasks", true, "Final Task");
-  vars.miscallenousTasks = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.miscallenousTasks, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco", false);
-  AddToSettings(vars.miscallenousTasks, "jak1_misc_tasks");
-  vars.optionLists.Add(vars.miscallenousTasks);
+
+  // Other Non-Cell Tasks
+  settings.Add("jak1_other_tasks", true, "Other Non-Cell Tasks");
+  vars.otherTasks = new List<Dictionary<String, dynamic>>();
+  
+  AddOption(vars.otherTasks, "int_jungle_fishgame", jak1_need_res_offset + 107, typeof(byte), 1, false, "Forbidden Jungle - Talk to Fisherman", false);
+  AddOption(vars.otherTasks, "com_jungle_lurkerm", jak1_need_res_offset + 108, typeof(byte), 1, false, "Forbidden Jungle - Connect the Eco Beams", false);
+  AddOption(vars.otherTasks, "com_misty_muse", jak1_need_res_offset + 109, typeof(byte), 1, false, "Misty Island - Catch the Sculptors Muse", false);
+  AddOption(vars.otherTasks, "com_rolling_race", jak1_need_res_offset + 111, typeof(byte), 1, false, "Precursor Basin - Beat Record Time on the Gorge", false);
+  AddOption(vars.otherTasks, "com_rolling_moles", jak1_need_res_offset + 110, typeof(byte), 1, false, "Precursor Basin - Herd the Moles into their Hole", false);
+  AddOption(vars.otherTasks, "res_lavatube_balls", jak1_need_res_offset + 103, typeof(byte), 1, false, "Lava Tube - Finish Oranges", false);
+  AddOption(vars.otherTasks, "unk_finalboss_movies", jak1_need_res_offset + 106, typeof(byte), 1, false, "Light Eco?!?! That could be the stuff to change me back!", false);
+  AddToSettings(vars.otherTasks, "jak1_other_tasks");
+  vars.optionLists.Add(vars.otherTasks);
+
+
+  // Final Task
+  settings.Add("jak1_final_tasks", true, "Final Task");
+  vars.finalTasks = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.finalTasks, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco", false);
+  AddToSettings(vars.finalTasks, "jak1_final_tasks");
+  vars.optionLists.Add(vars.finalTasks);
 
   // Treat this one as special, so we can ensure the timer ends no matter what!
-  vars.finalSplitTask = vars.miscallenousTasks[0];
+  vars.finalSplitTask = vars.finalTasks[0];
+  
+  // Misc Splits
+  settings.Add("jak1_misc", true, "Misc");
+  vars.miscSplits = new List<Dictionary<String, dynamic>>();
+
+  // Generic Split for any Cell count change (for custom levels)
+  AddOption(vars.miscSplits, "num_power_cells", 0, typeof(uint), null, false, "Split on any Cell pickup (for Custom Levels)", false);
+  AddToSettings(vars.miscSplits, "jak1_misc");
+  vars.optionLists.Add(vars.miscSplits);
 
   vars.DebugOutput("Finished {startup}", true);
 }
