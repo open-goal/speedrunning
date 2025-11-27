@@ -560,6 +560,30 @@
     {
       "label": "arena-fight-1-throne",
       "type": "bool"
+    },
+    {
+      "label": "int-temple-climb",
+      "type": "bool"
+    },
+    {
+      "label": "temple-defend-door-4",
+      "type": "bool"
+    },
+    {
+      "label": "int-city-bbush-get-to-26",
+      "type": "bool"
+    },
+    {
+      "label": "int-city-bbush-get-to-31",
+      "type": "bool"
+    },
+    {
+      "label": "int-city-bbush-get-to-28",
+      "type": "bool"
+    },
+    {
+      "label": "desert-final-boss-walker",
+      "type": "bool"
     }
   ],
   "presets": [
@@ -571,16 +595,37 @@
         "arena-fight-1-throne",
         "res-wascity-chase",
         "res-temple-defend",
+        "int-city-bbush-get-to-26",
+        "int-city-bbush-get-to-31",
         "res-palace-ruins-patrol",
         "res-palace-ruins-attack",
         "res-comb-wild-ride",
         "res-precursor-destroy-ship",
+        "desert-final-boss-walker",
         "res-desert-final-boss"
       ]
     },
     {
-      "name": "Any% No OoB",
+      "name": "Any% No OoB (Unrestricted)",
       "varName": "noOob",
+      "options": [
+        "res-arena-training-1",
+        "arena-fight-1-throne",
+        "int-temple-climb",
+        "res-temple-climb",
+        "temple-defend-door-4",
+        "int-city-bbush-get-to-26",
+        "res-palace-ruins-patrol",
+        "res-palace-ruins-attack",
+        "res-comb-wild-ride",
+        "res-precursor-destroy-ship",
+        "desert-final-boss-walker",
+        "res-desert-final-boss"
+      ]
+    },
+    {
+      "name": "Any% No OoB (Restricted)",
+      "varName": "noOobResticted",
       "options": [
         "res-arena-training-1",
         "arena-fight-1-throne",
@@ -590,10 +635,12 @@
         "res-mine-explore",
         "res-mine-blow",
         "res-mine-boss",
+        "int-city-bbush-get-to-28",
         "res-palace-ruins-patrol",
         "res-palace-ruins-attack",
         "res-comb-wild-ride",
         "res-precursor-destroy-ship",
+        "desert-final-boss-walker",
         "res-desert-final-boss"
       ]
     },
@@ -605,10 +652,13 @@
         "arena-fight-1-throne",
         "res-wascity-chase",
         "res-temple-defend",
+        "int-city-bbush-get-to-26",
+        "int-city-bbush-get-to-31",
         "res-palace-ruins-patrol",
         "res-palace-ruins-attack",
         "res-comb-wild-ride",
         "res-precursor-destroy-ship",
+        "desert-final-boss-walker",
         "res-desert-final-boss"
       ]
     },
@@ -677,6 +727,7 @@
         "res-palace-ruins-attack",
         "res-comb-wild-ride",
         "res-precursor-destroy-ship",
+        "desert-final-boss-walker",
         "res-desert-final-boss"
       ]
     },
@@ -745,6 +796,7 @@
         "res-palace-ruins-attack",
         "res-comb-wild-ride",
         "res-precursor-destroy-ship",
+        "desert-final-boss-walker",
         "res-desert-final-boss",
         "res-city-win",
         "res-desert-bbush-get-to-1",
