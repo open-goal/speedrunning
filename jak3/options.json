@@ -570,7 +570,7 @@
       "type": "bool"
     },
     {
-      "label": "temple-defend-door-4",
+      "label": "int-temple-defend",
       "type": "bool"
     },
     {
@@ -602,7 +602,7 @@
         "res-arena-training-1",
         "arena-fight-1-throne",
         "res-wascity-chase",
-        "res-temple-defend",
+        "int-temple-defend",
         "int-city-bbush-get-to-26",
         "int-city-bbush-get-to-31",
         "res-palace-ruins-patrol",
@@ -621,7 +621,7 @@
         "arena-fight-1-throne",
         "int-temple-climb",
         "res-temple-climb",
-        "temple-defend-door-4",
+        "int-temple-defend",
         "int-city-bbush-get-to-26",
         "res-palace-ruins-patrol",
         "res-palace-ruins-attack",
@@ -669,7 +669,7 @@
         "res-arena-training-1",
         "arena-fight-1-throne",
         "res-wascity-chase",
-        "res-temple-defend",
+        "int-temple-defend",
         "int-city-bbush-get-to-26",
         "int-city-bbush-get-to-31",
         "res-palace-ruins-patrol",
