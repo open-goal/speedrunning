@@ -274,7 +274,7 @@
       "type": "bool"
     },
     {
-      "label": "res-stadium-race-class",
+      "label": "res-stadium-race-class1",
       "type": "bool"
     },
     {
@@ -480,6 +480,18 @@
     {
       "label": "forest-protect-meeting",
       "type": "bool"
+    },
+    {
+      "label": "int-stadium-race-class3",
+      "type": "bool"
+    },
+    {
+      "label": "int-stadium-race-class2",
+      "type": "bool"
+    },
+    {
+      "label": "int-stadium-race-class1",
+      "type": "bool"
     }
   ],
   "presets": [
@@ -497,6 +509,7 @@
         "res-fortress-save-friends",
         "res-sewer-escort",
         "res-city-stop-bomb-bots",
+        "int-stadium-race-class2",
         "res-stadium-race-class2",
         "sewer-escort-get-gun",
         "res-city-errol-challenge",
@@ -507,7 +520,8 @@
         "res-strip-drop",
         "res-drill-mech",
         "res-city-save-lurkers",
-        "res-stadium-race-class",
+        "int-stadium-race-class1",
+        "res-stadium-race-class1",
         "res-palace-sneak-in",
         "res-castle-break-in",
         "res-castle-boss",
@@ -578,7 +592,7 @@
         "res-strip-drop",
         "res-drill-mech",
         "res-city-save-lurkers",
-        "res-stadium-race-class",
+        "res-stadium-race-class1",
         "res-palace-sneak-in",
         "res-castle-break-in",
         "res-castle-boss",
@@ -665,7 +679,7 @@
         "res-strip-drop",
         "res-drill-mech",
         "res-city-save-lurkers",
-        "res-stadium-race-class",
+        "res-stadium-race-class1",
         "res-palace-sneak-in",
         "res-castle-break-in",
         "res-castle-boss",

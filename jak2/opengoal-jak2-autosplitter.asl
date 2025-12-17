@@ -55,6 +55,7 @@ startup {
   AddOption(vars.anyPercent, "anyPercent_res-fortress-save-friends", 464, typeof(byte), 1, false, "res-fortress-save-friends", false);
   AddOption(vars.anyPercent, "anyPercent_res-sewer-escort", 465, typeof(byte), 1, false, "res-sewer-escort", false);
   AddOption(vars.anyPercent, "anyPercent_res-city-stop-bomb-bots", 468, typeof(byte), 1, false, "res-city-stop-bomb-bots", false);
+  AddOption(vars.anyPercent, "anyPercent_int-stadium-race-class2", 528, typeof(byte), 1, false, "int-stadium-race-class2", false);
   AddOption(vars.anyPercent, "anyPercent_res-stadium-race-class2", 467, typeof(byte), 1, false, "res-stadium-race-class2", false);
   AddOption(vars.anyPercent, "anyPercent_sewer-escort-get-gun", 524, typeof(byte), 1, false, "sewer-escort-get-gun", false);
   AddOption(vars.anyPercent, "anyPercent_res-city-errol-challenge", 469, typeof(byte), 1, false, "res-city-errol-challenge", false);
@@ -65,7 +66,8 @@ startup {
   AddOption(vars.anyPercent, "anyPercent_res-strip-drop", 470, typeof(byte), 1, false, "res-strip-drop", false);
   AddOption(vars.anyPercent, "anyPercent_res-drill-mech", 473, typeof(byte), 1, false, "res-drill-mech", false);
   AddOption(vars.anyPercent, "anyPercent_res-city-save-lurkers", 474, typeof(byte), 1, false, "res-city-save-lurkers", false);
-  AddOption(vars.anyPercent, "anyPercent_res-stadium-race-class", 475, typeof(byte), 1, false, "res-stadium-race-class", false);
+  AddOption(vars.anyPercent, "anyPercent_int-stadium-race-class1", 529, typeof(byte), 1, false, "int-stadium-race-class1", false);
+  AddOption(vars.anyPercent, "anyPercent_res-stadium-race-class1", 475, typeof(byte), 1, false, "res-stadium-race-class1", false);
   AddOption(vars.anyPercent, "anyPercent_res-palace-sneak-in", 476, typeof(byte), 1, false, "res-palace-sneak-in", false);
   AddOption(vars.anyPercent, "anyPercent_res-castle-break-in", 477, typeof(byte), 1, false, "res-castle-break-in", false);
   AddOption(vars.anyPercent, "anyPercent_res-castle-boss", 478, typeof(byte), 1, false, "res-castle-boss", false);
@@ -134,7 +136,7 @@ startup {
   AddOption(vars.allMissions, "allMissions_res-strip-drop", 470, typeof(byte), 1, false, "res-strip-drop", false);
   AddOption(vars.allMissions, "allMissions_res-drill-mech", 473, typeof(byte), 1, false, "res-drill-mech", false);
   AddOption(vars.allMissions, "allMissions_res-city-save-lurkers", 474, typeof(byte), 1, false, "res-city-save-lurkers", false);
-  AddOption(vars.allMissions, "allMissions_res-stadium-race-class", 475, typeof(byte), 1, false, "res-stadium-race-class", false);
+  AddOption(vars.allMissions, "allMissions_res-stadium-race-class1", 475, typeof(byte), 1, false, "res-stadium-race-class1", false);
   AddOption(vars.allMissions, "allMissions_res-palace-sneak-in", 476, typeof(byte), 1, false, "res-palace-sneak-in", false);
   AddOption(vars.allMissions, "allMissions_res-castle-break-in", 477, typeof(byte), 1, false, "res-castle-break-in", false);
   AddOption(vars.allMissions, "allMissions_res-castle-boss", 478, typeof(byte), 1, false, "res-castle-boss", false);
@@ -219,7 +221,7 @@ startup {
   AddOption(vars.hundredPercent, "hundredPercent_res-strip-drop", 470, typeof(byte), 1, false, "res-strip-drop", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-drill-mech", 473, typeof(byte), 1, false, "res-drill-mech", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-city-save-lurkers", 474, typeof(byte), 1, false, "res-city-save-lurkers", false);
-  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-race-class", 475, typeof(byte), 1, false, "res-stadium-race-class", false);
+  AddOption(vars.hundredPercent, "hundredPercent_res-stadium-race-class1", 475, typeof(byte), 1, false, "res-stadium-race-class1", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-palace-sneak-in", 476, typeof(byte), 1, false, "res-palace-sneak-in", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-castle-break-in", 477, typeof(byte), 1, false, "res-castle-break-in", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-castle-boss", 478, typeof(byte), 1, false, "res-castle-boss", false);
@@ -307,7 +309,7 @@ startup {
   AddOption(vars.manualOptions, "res-forest-protect", 472, typeof(byte), 1, false, "res-forest-protect", false);
   AddOption(vars.manualOptions, "res-drill-mech", 473, typeof(byte), 1, false, "res-drill-mech", false);
   AddOption(vars.manualOptions, "res-city-save-lurkers", 474, typeof(byte), 1, false, "res-city-save-lurkers", false);
-  AddOption(vars.manualOptions, "res-stadium-race-class", 475, typeof(byte), 1, false, "res-stadium-race-class", false);
+  AddOption(vars.manualOptions, "res-stadium-race-class1", 475, typeof(byte), 1, false, "res-stadium-race-class1", false);
   AddOption(vars.manualOptions, "res-palace-sneak-in", 476, typeof(byte), 1, false, "res-palace-sneak-in", false);
   AddOption(vars.manualOptions, "res-castle-break-in", 477, typeof(byte), 1, false, "res-castle-break-in", false);
   AddOption(vars.manualOptions, "res-castle-boss", 478, typeof(byte), 1, false, "res-castle-boss", false);
@@ -359,6 +361,9 @@ startup {
   AddOption(vars.manualOptions, "sewer-escort-get-gun", 524, typeof(byte), 1, false, "sewer-escort-get-gun", false);
   AddOption(vars.manualOptions, "forest-protect-introduction", 525, typeof(byte), 1, false, "forest-protect-introduction", false);
   AddOption(vars.manualOptions, "forest-protect-meeting", 526, typeof(byte), 1, false, "forest-protect-meeting", false);
+  AddOption(vars.manualOptions, "int-stadium-race-class3", 527, typeof(byte), 1, false, "int-stadium-race-class3", false);
+  AddOption(vars.manualOptions, "int-stadium-race-class2", 528, typeof(byte), 1, false, "int-stadium-race-class2", false);
+  AddOption(vars.manualOptions, "int-stadium-race-class1", 529, typeof(byte), 1, false, "int-stadium-race-class1", false);
   settings.Add("manual_options", false, "Manual Options");
   AddToSettings(vars.manualOptions, "manual_options");
   vars.optionLists.Add(vars.manualOptions);
