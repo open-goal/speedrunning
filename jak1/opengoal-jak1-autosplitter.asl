@@ -540,7 +540,7 @@ split {
   }
 
   // ALWAYS split if the final split condition is true, so no matter what we exhaust all splits until the end
-  if (vars.watchers[vars.finalSplitTask["id"]].Current == vars.finalSplitTask["splitVal"]) {
+  if (settings[vars.finalSplitTask["id"]] && vars.watchers[vars.finalSplitTask["id"]].Current == vars.finalSplitTask["splitVal"]) {
     return true;
   }
 }
