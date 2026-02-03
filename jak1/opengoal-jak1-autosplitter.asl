@@ -385,6 +385,7 @@ startup {
   AddOption(vars.otherTasks, "com_rolling_moles", jak1_need_res_offset + 110, typeof(byte), 1, false, "Precursor Basin - Herd the Moles into their Hole", false);
   AddOption(vars.otherTasks, "res_lavatube_balls", jak1_need_res_offset + 103, typeof(byte), 1, false, "Lava Tube - Finish Oranges", false);
   AddOption(vars.otherTasks, "unk_finalboss_movies", jak1_need_res_offset + 106, typeof(byte), 1, false, "Light Eco?!?! That could be the stuff to change me back!", false);
+  AddOption(vars.otherTasks, "int_finalboss_movies_single", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco (single split)", false);
   AddToSettings(vars.otherTasks, "jak1_other_tasks");
   vars.optionLists.Add(vars.otherTasks);
 
@@ -392,7 +393,7 @@ startup {
   // Final Task
   settings.Add("jak1_final_tasks", true, "Final Task");
   vars.finalTasks = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.finalTasks, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco", false);
+  AddOption(vars.finalTasks, "int_finalboss_movies", jak1_need_res_offset + 105, typeof(byte), 1, true, "Collect Light Eco (finish run)", false);
   AddToSettings(vars.finalTasks, "jak1_final_tasks");
   vars.optionLists.Add(vars.finalTasks);
 
