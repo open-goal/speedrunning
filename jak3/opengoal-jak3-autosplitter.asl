@@ -51,6 +51,7 @@ startup {
   AddOption(vars.anyPercent, "anyPercent_int-temple-defend", 549, typeof(byte), 1, false, "int-temple-defend", false);
   AddOption(vars.anyPercent, "anyPercent_int-city-bbush-get-to-26", 551, typeof(byte), 1, false, "int-city-bbush-get-to-26", false);
   AddOption(vars.anyPercent, "anyPercent_int-city-bbush-get-to-31", 552, typeof(byte), 1, false, "int-city-bbush-get-to-31", false);
+  AddOption(vars.anyPercent, "anyPercent_palace-ruins-patrol-stadium", 550, typeof(byte), 1, false, "palace-ruins-patrol-stadium", false);
   AddOption(vars.anyPercent, "anyPercent_res-palace-ruins-patrol", 475, typeof(byte), 1, false, "res-palace-ruins-patrol", false);
   AddOption(vars.anyPercent, "anyPercent_res-palace-ruins-attack", 476, typeof(byte), 1, false, "res-palace-ruins-attack", false);
   AddOption(vars.anyPercent, "anyPercent_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
@@ -67,6 +68,7 @@ startup {
   AddOption(vars.noOob, "noOob_res-temple-climb", 433, typeof(byte), 1, false, "res-temple-climb", false);
   AddOption(vars.noOob, "noOob_int-temple-defend", 549, typeof(byte), 1, false, "int-temple-defend", false);
   AddOption(vars.noOob, "noOob_int-city-bbush-get-to-26", 551, typeof(byte), 1, false, "int-city-bbush-get-to-26", false);
+  AddOption(vars.noOob, "noOob_palace-ruins-patrol-stadium", 550, typeof(byte), 1, false, "palace-ruins-patrol-stadium", false);
   AddOption(vars.noOob, "noOob_res-palace-ruins-patrol", 475, typeof(byte), 1, false, "res-palace-ruins-patrol", false);
   AddOption(vars.noOob, "noOob_res-palace-ruins-attack", 476, typeof(byte), 1, false, "res-palace-ruins-attack", false);
   AddOption(vars.noOob, "noOob_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
@@ -112,6 +114,7 @@ startup {
   AddOption(vars.anyhero, "anyhero_int-temple-defend", 549, typeof(byte), 1, false, "int-temple-defend", false);
   AddOption(vars.anyhero, "anyhero_int-city-bbush-get-to-26", 551, typeof(byte), 1, false, "int-city-bbush-get-to-26", false);
   AddOption(vars.anyhero, "anyhero_int-city-bbush-get-to-31", 552, typeof(byte), 1, false, "int-city-bbush-get-to-31", false);
+  AddOption(vars.anyhero, "anyhero_palace-ruins-patrol-stadium", 550, typeof(byte), 1, false, "palace-ruins-patrol-stadium", false);
   AddOption(vars.anyhero, "anyhero_res-palace-ruins-patrol", 475, typeof(byte), 1, false, "res-palace-ruins-patrol", false);
   AddOption(vars.anyhero, "anyhero_res-palace-ruins-attack", 476, typeof(byte), 1, false, "res-palace-ruins-attack", false);
   AddOption(vars.anyhero, "anyhero_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
