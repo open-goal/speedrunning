@@ -36,7 +36,7 @@ startup {
   vars.optionLists = new List<List<Dictionary<String, dynamic>>>();
 
   vars.endingConditions = new List<Dictionary<String, dynamic>>();
-  AddOption(vars.endingConditions, "endingConditions_errol-death", 12, typeof(byte), 1, false, "Errol Death", false);
+  AddOption(vars.endingConditions, "endingConditions_errol-death", 12, typeof(byte), 1, true, "Errol Death", false);
   AddOption(vars.endingConditions, "endingConditions_all-collectables", 13, typeof(byte), 1, false, "All Collectables", false);
   AddOption(vars.endingConditions, "endingConditions_all-orbs", 4, typeof(uint), 600, false, "All Orbs", false);
   settings.Add("group_endingConditions", true, "Ending Conditions");
@@ -57,7 +57,6 @@ startup {
   AddOption(vars.anyPercent, "anyPercent_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
   AddOption(vars.anyPercent, "anyPercent_res-precursor-destroy-ship", 478, typeof(byte), 1, false, "res-precursor-destroy-ship", false);
   AddOption(vars.anyPercent, "anyPercent_desert-final-boss-walker", 554, typeof(byte), 1, false, "desert-final-boss-walker", false);
-  AddOption(vars.anyPercent, "anyPercent_res-desert-final-boss", 479, typeof(byte), 1, false, "res-desert-final-boss", false);
   settings.Add("preset_anyPercent", false, "Any%");
   AddToSettings(vars.anyPercent, "preset_anyPercent");
   vars.optionLists.Add(vars.anyPercent);
@@ -74,7 +73,6 @@ startup {
   AddOption(vars.noOob, "noOob_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
   AddOption(vars.noOob, "noOob_res-precursor-destroy-ship", 478, typeof(byte), 1, false, "res-precursor-destroy-ship", false);
   AddOption(vars.noOob, "noOob_desert-final-boss-walker", 554, typeof(byte), 1, false, "desert-final-boss-walker", false);
-  AddOption(vars.noOob, "noOob_res-desert-final-boss", 479, typeof(byte), 1, false, "res-desert-final-boss", false);
   settings.Add("preset_noOob", false, "Any% No OoB (Unrestricted)");
   AddToSettings(vars.noOob, "preset_noOob");
   vars.optionLists.Add(vars.noOob);
@@ -103,7 +101,6 @@ startup {
   AddOption(vars.noOobResticted, "noOobResticted_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
   AddOption(vars.noOobResticted, "noOobResticted_res-precursor-destroy-ship", 478, typeof(byte), 1, false, "res-precursor-destroy-ship", false);
   AddOption(vars.noOobResticted, "noOobResticted_desert-final-boss-walker", 554, typeof(byte), 1, false, "desert-final-boss-walker", false);
-  AddOption(vars.noOobResticted, "noOobResticted_res-desert-final-boss", 479, typeof(byte), 1, false, "res-desert-final-boss", false);
   settings.Add("preset_noOobResticted", false, "Any% No OoB (Restricted)");
   AddToSettings(vars.noOobResticted, "preset_noOobResticted");
   vars.optionLists.Add(vars.noOobResticted);
@@ -120,7 +117,6 @@ startup {
   AddOption(vars.anyhero, "anyhero_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
   AddOption(vars.anyhero, "anyhero_res-precursor-destroy-ship", 478, typeof(byte), 1, false, "res-precursor-destroy-ship", false);
   AddOption(vars.anyhero, "anyhero_desert-final-boss-walker", 554, typeof(byte), 1, false, "desert-final-boss-walker", false);
-  AddOption(vars.anyhero, "anyhero_res-desert-final-boss", 479, typeof(byte), 1, false, "res-desert-final-boss", false);
   settings.Add("preset_anyhero", false, "Any% Hero Mode");
   AddToSettings(vars.anyhero, "preset_anyhero");
   vars.optionLists.Add(vars.anyhero);
@@ -187,7 +183,6 @@ startup {
   AddOption(vars.allMissions, "allMissions_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
   AddOption(vars.allMissions, "allMissions_res-precursor-destroy-ship", 478, typeof(byte), 1, false, "res-precursor-destroy-ship", false);
   AddOption(vars.allMissions, "allMissions_desert-final-boss-walker", 554, typeof(byte), 1, false, "desert-final-boss-walker", false);
-  AddOption(vars.allMissions, "allMissions_res-desert-final-boss", 479, typeof(byte), 1, false, "res-desert-final-boss", false);
   settings.Add("preset_allMissions", false, "All Missions");
   AddToSettings(vars.allMissions, "preset_allMissions");
   vars.optionLists.Add(vars.allMissions);
@@ -254,8 +249,6 @@ startup {
   AddOption(vars.hundredPercent, "hundredPercent_res-comb-wild-ride", 477, typeof(byte), 1, false, "res-comb-wild-ride", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-precursor-destroy-ship", 478, typeof(byte), 1, false, "res-precursor-destroy-ship", false);
   AddOption(vars.hundredPercent, "hundredPercent_desert-final-boss-walker", 554, typeof(byte), 1, false, "desert-final-boss-walker", false);
-  AddOption(vars.hundredPercent, "hundredPercent_res-desert-final-boss", 479, typeof(byte), 1, false, "res-desert-final-boss", false);
-  AddOption(vars.hundredPercent, "hundredPercent_res-city-win", 480, typeof(byte), 1, false, "res-city-win", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-desert-bbush-get-to-1", 481, typeof(byte), 1, false, "res-desert-bbush-get-to-1", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-desert-bbush-get-to-2", 482, typeof(byte), 1, false, "res-desert-bbush-get-to-2", false);
   AddOption(vars.hundredPercent, "hundredPercent_res-desert-bbush-get-to-3", 483, typeof(byte), 1, false, "res-desert-bbush-get-to-3", false);
