@@ -21,8 +21,22 @@
       "hidden": true
     },
     {
+      "label": "errol-dead",
+      "type": "bool",
+      "hidden": true
+    },
+    {
+      "label": "all-collectables-acquired",
+      "type": "bool",
+      "hidden": true
+    },
+    {
+      "label": "prebot-dead",
+      "type": "bool"
+    },
+    {
       "label": "padding",
-      "type": "uint8[200]",
+      "type": "uint8[197]",
       "hidden": true
     },
     {
@@ -652,6 +666,7 @@
         "res-comb-travel",
         "res-mine-explore",
         "res-mine-blow",
+        "prebot-dead",
         "palace-ruins-patrol-stadium",
         "int-city-bbush-get-to-28",
         "res-palace-ruins-patrol",
