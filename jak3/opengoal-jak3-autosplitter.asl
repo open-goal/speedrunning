@@ -94,6 +94,7 @@ startup {
   AddOption(vars.noOobResticted, "noOobResticted_res-comb-travel", 439, typeof(byte), 1, false, "res-comb-travel", false);
   AddOption(vars.noOobResticted, "noOobResticted_res-mine-explore", 440, typeof(byte), 1, false, "res-mine-explore", false);
   AddOption(vars.noOobResticted, "noOobResticted_res-mine-blow", 441, typeof(byte), 1, false, "res-mine-blow", false);
+  AddOption(vars.noOobResticted, "noOobResticted_prebot-dead", 14, typeof(byte), 1, false, "prebot-dead", false);
   AddOption(vars.noOobResticted, "noOobResticted_palace-ruins-patrol-stadium", 550, typeof(byte), 1, false, "palace-ruins-patrol-stadium", false);
   AddOption(vars.noOobResticted, "noOobResticted_int-city-bbush-get-to-28", 553, typeof(byte), 1, false, "int-city-bbush-get-to-28", false);
   AddOption(vars.noOobResticted, "noOobResticted_res-palace-ruins-patrol", 475, typeof(byte), 1, false, "res-palace-ruins-patrol", false);
@@ -318,6 +319,7 @@ startup {
   AddToSettings(vars.hundredPercent, "preset_hundredPercent");
   vars.optionLists.Add(vars.hundredPercent);
   vars.manualOptions = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.manualOptions, "prebot-dead", 14, typeof(byte), 1, false, "prebot-dead", false);
   AddOption(vars.manualOptions, "res-arena-training-1", 418, typeof(byte), 1, false, "res-arena-training-1", false);
   AddOption(vars.manualOptions, "res-arena-fight-1", 419, typeof(byte), 1, false, "res-arena-fight-1", false);
   AddOption(vars.manualOptions, "res-wascity-chase", 420, typeof(byte), 1, false, "res-wascity-chase", false);
