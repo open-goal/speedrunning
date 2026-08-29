@@ -457,6 +457,11 @@ startup {
   AddOption(vars.manualOptions, "int-city-bbush-get-to-31", 552, typeof(byte), 1, false, "int-city-bbush-get-to-31", false);
   AddOption(vars.manualOptions, "int-city-bbush-get-to-28", 553, typeof(byte), 1, false, "int-city-bbush-get-to-28", false);
   AddOption(vars.manualOptions, "desert-final-boss-walker", 554, typeof(byte), 1, false, "desert-final-boss-walker", false);
+  AddOption(vars.manualOptions, "wascity-pre-game-gold", 555, typeof(byte), 1, false, "wascity-pre-game-gold", false);
+  AddOption(vars.manualOptions, "wascity-gungame-gold", 556, typeof(byte), 1, false, "wascity-gungame-gold", false);
+  AddOption(vars.manualOptions, "city-gun-course-1-gold", 557, typeof(byte), 1, false, "city-gun-course-1-gold", false);
+  AddOption(vars.manualOptions, "city-gun-course-2-gold", 558, typeof(byte), 1, false, "city-gun-course-2-gold", false);
+  AddOption(vars.manualOptions, "city-power-game-gold", 559, typeof(byte), 1, false, "city-power-game-gold", false);
   settings.Add("manual_options", false, "Manual Options");
   AddToSettings(vars.manualOptions, "manual_options");
   vars.optionLists.Add(vars.manualOptions);

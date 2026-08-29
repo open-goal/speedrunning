@@ -606,6 +606,26 @@
     {
       "label": "desert-final-boss-walker",
       "type": "bool"
+    },
+    {
+      "label": "wascity-pre-game-gold",
+      "type": "bool"
+    },
+    {
+      "label": "wascity-gungame-gold",
+      "type": "bool"
+    },
+    {
+      "label": "city-gun-course-1-gold",
+      "type": "bool"
+    },
+    {
+      "label": "city-gun-course-2-gold",
+      "type": "bool"
+    },
+    {
+      "label": "city-power-game-gold",
+      "type": "bool"
     }
   ],
   "presets": [
