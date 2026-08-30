@@ -42,6 +42,66 @@ startup {
   settings.Add("group_endingConditions", true, "Ending Conditions");
   AddToSettings(vars.endingConditions, "group_endingConditions");
 
+  // Per-level All Orbs Splits
+
+  vars.allOpenOrbs = new List<Dictionary<String, dynamic>>();
+  // AddOption(vars.allOpenOrbs, "allOpenOrbs_vinroom-num-orbs", 560, typeof(byte), 0, false, "Power Station", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_ctygenb-num-orbs",    561, typeof(byte), 8, false, "Main Town Ruins", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_ctysluma-num-orbs",   562, typeof(byte), 3, false, "Slums", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_ctyslumb-num-orbs",   563, typeof(byte), 7, false, "New Haven South", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_ctyslumc-num-orbs",   564, typeof(byte), 4, false, "New Haven North", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_ctyport-num-orbs",    565, typeof(byte), 30, false, "Haven City Port", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_ctyinda-num-orbs",    566, typeof(byte), 8, false, "Industrial South", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_ctyindb-num-orbs",    567, typeof(byte), 5, false, "Industrial North", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_stadium-num-orbs",    568, typeof(byte), 10, false, "Stadium Ruins East", false);
+  // AddOption(vars.allOpenOrbs, "allOpenOrbs_gungame-num-orbs", 569, typeof(byte), 0, false, "Gun Course", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_sewb-num-orbs",       570, typeof(byte), 3, false, "Sewers 3.1", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_sewd-num-orbs",       571, typeof(byte), 3, false, "Sewers 3.3", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_sewh-num-orbs",       572, typeof(byte), 3, false, "Sewers 2.3", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_sewm-num-orbs",       573, typeof(byte), 2, false, "Sewers 1.2", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_sewo-num-orbs",       574, typeof(byte), 2, false, "Sewers 1.4", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_wascitya-num-orbs",   575, typeof(byte), 27, false, "Spargus East", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_wascityb-num-orbs",   576, typeof(byte), 21, false, "Spargus West", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_wasstada-num-orbs",   577, typeof(byte), 3, false, "Spargus Arena", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_waspala-num-orbs",    578, typeof(byte), 5, false, "Spargus Palace", false);
+  // AddOption(vars.allOpenOrbs, "allOpenOrbs_desert-num-orbs",  579, typeof(byte), 0, false, "Wasteland", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_nsta-num-orbs",       580, typeof(byte), 8, false, "Metal Head Cave", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_templex-num-orbs",    581, typeof(byte), 3, false, "Monk Temple Exterior", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_templeb-num-orbs",    582, typeof(byte), 13, false, "Monk Temple Center", false);
+  AddOption(vars.allOpenOrbs, "allOpenOrbs_templed-num-orbs",    583, typeof(byte), 1, false, "Monk Temple Rescue Seem", false);
+  settings.Add("jak3_level_all_open_orbs", false, "All Open Orbs per level");
+  AddToSettings(vars.allOpenOrbs, "jak3_level_all_open_orbs");
+  vars.optionLists.Add(vars.allOpenOrbs);
+
+  settings.Add("jak3_level_all_orbs", false, "All Orbs per level");
+  vars.allOrbs = new List<Dictionary<String, dynamic>>();
+  AddOption(vars.allOrbs, "allOrbs_vinroom-num-orbs",  560, typeof(byte), 9, false, "Power Station", false);
+  AddOption(vars.allOrbs, "allOrbs_ctygenb-num-orbs",  561, typeof(byte), 20, false, "Main Town Ruins", false);
+  AddOption(vars.allOrbs, "allOrbs_ctysluma-num-orbs", 562, typeof(byte), 19, false, "Slums", false);
+  AddOption(vars.allOrbs, "allOrbs_ctyslumb-num-orbs", 563, typeof(byte), 23, false, "New Haven South", false);
+  AddOption(vars.allOrbs, "allOrbs_ctyslumc-num-orbs", 564, typeof(byte), 10, false, "New Haven North", false);
+  AddOption(vars.allOrbs, "allOrbs_ctyport-num-orbs",  565, typeof(byte), 30, false, "Haven City Port", false);
+  AddOption(vars.allOrbs, "allOrbs_ctyinda-num-orbs",  566, typeof(byte), 45, false, "Industrial South", false);
+  AddOption(vars.allOrbs, "allOrbs_ctyindb-num-orbs",  567, typeof(byte), 11, false, "Industrial North", false);
+  AddOption(vars.allOrbs, "allOrbs_stadium-num-orbs",  568, typeof(byte), 10, false, "Stadium Ruins East", false);
+  AddOption(vars.allOrbs, "allOrbs_gungame-num-orbs",  569, typeof(byte), 18, false, "Gun Course", false);
+  AddOption(vars.allOrbs, "allOrbs_sewb-num-orbs",     570, typeof(byte), 3, false, "Sewers 3.1", false);
+  AddOption(vars.allOrbs, "allOrbs_sewd-num-orbs",     571, typeof(byte), 3, false, "Sewers 3.3", false);
+  AddOption(vars.allOrbs, "allOrbs_sewh-num-orbs",     572, typeof(byte), 3, false, "Sewers 2.3", false);
+  AddOption(vars.allOrbs, "allOrbs_sewm-num-orbs",     573, typeof(byte), 2, false, "Sewers 1.2", false);
+  AddOption(vars.allOrbs, "allOrbs_sewo-num-orbs",     574, typeof(byte), 2, false, "Sewers 1.4", false);
+  AddOption(vars.allOrbs, "allOrbs_wascitya-num-orbs", 575, typeof(byte), 59, false, "Spargus East", false);
+  AddOption(vars.allOrbs, "allOrbs_wascityb-num-orbs", 576, typeof(byte), 62, false, "Spargus West", false);
+  AddOption(vars.allOrbs, "allOrbs_wasstada-num-orbs", 577, typeof(byte), 3, false, "Spargus Arena", false);
+  AddOption(vars.allOrbs, "allOrbs_waspala-num-orbs",  578, typeof(byte), 5, false, "Spargus Palace", false);
+  AddOption(vars.allOrbs, "allOrbs_desert-num-orbs",   579, typeof(byte), 208, false, "Wasteland", false);
+  AddOption(vars.allOrbs, "allOrbs_nsta-num-orbs",     580, typeof(byte), 8, false, "Metal Head Cave", false);
+  AddOption(vars.allOrbs, "allOrbs_templex-num-orbs",  581, typeof(byte), 3, false, "Monk Temple Exterior", false);
+  AddOption(vars.allOrbs, "allOrbs_templeb-num-orbs",  582, typeof(byte), 13, false, "Monk Temple Center", false);
+  AddOption(vars.allOrbs, "allOrbs_templed-num-orbs",  583, typeof(byte), 1, false, "Monk Temple Rescue Seem", false);
+  AddToSettings(vars.allOrbs, "jak3_level_all_orbs");
+  vars.optionLists.Add(vars.allOrbs);
+
   // NOTE: This section is autogenerated.  Do not edit it directly.
   // __AUTOGENERATED__ START
   vars.anyPercent = new List<Dictionary<String, dynamic>>();

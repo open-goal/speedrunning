@@ -626,6 +626,126 @@
     {
       "label": "city-power-game-gold",
       "type": "bool"
+    },
+    {
+      "label": "vinroom-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "ctygenb-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "ctysluma-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "ctyslumb-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "ctyslumc-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "ctyport-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "ctyinda-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "ctyindb-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "stadium-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "gungame-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "sewb-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "sewd-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "sewh-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "sewm-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "sewo-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "wascitya-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "wascityb-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "wasstada-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "waspala-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "desert-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "nsta-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "templex-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "templeb-num-orbs",
+      "type": "uint8",
+      "hidden": true
+    },
+    {
+      "label": "templed-num-orbs",
+      "type": "uint8",
+      "hidden": true
     }
   ],
   "presets": [
