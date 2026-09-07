@@ -608,24 +608,84 @@
       "type": "bool"
     },
     {
-      "label": "wascity-pre-game-gold",
-      "type": "bool"
+      "label": "wascity-pre-game-rank",
+      "type": "uint32",
+      "hidden": true
     },
     {
-      "label": "wascity-gungame-gold",
-      "type": "bool"
+      "label": "desert-bbush-time-trial-1-rank",
+      "type": "uint32",
+      "hidden": true
     },
     {
-      "label": "city-gun-course-1-gold",
-      "type": "bool"
+      "label": "desert-bbush-rally-rank",
+      "type": "uint32",
+      "hidden": true
     },
     {
-      "label": "city-gun-course-2-gold",
-      "type": "bool"
+      "label": "desert-bbush-air-time-rank",
+      "type": "uint32",
+      "hidden": true
     },
     {
-      "label": "city-power-game-gold",
-      "type": "bool"
+      "label": "desert-bbush-total-air-time-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "desert-bbush-jump-distance-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "desert-bbush-total-jump-distance-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "desert-bbush-roll-count-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "wascity-gungame-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "city-jetboard-bbush-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "city-gun-course-1-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "city-gun-course-2-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "city-ratchet-gun-course-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "city-clank-gun-course-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "city-power-game-rank",
+      "type": "uint32",
+      "hidden": true
+    },
+    {
+      "label": "desert-bbush-destroy-interceptors-rank",
+      "type": "uint32",
+      "hidden": true
     },
     {
       "label": "vinroom-num-orbs",
